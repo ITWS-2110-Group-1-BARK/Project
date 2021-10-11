@@ -1,0 +1,353 @@
+html,
+#body {
+  background-position: center right; 
+  background-repeat: no-repeat;
+  background-image: url("bg.jpeg");
+  background-size: cover;
+  
+}
+
+.pcontainer{
+    font-family: sans-serif;
+    text-align: left;
+    background: #ffffff;
+    opacity:80%;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    padding: 20px;
+    float:center;
+    margin: 30px;
+    margin-top:10vw;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.pcontainer h2{
+    color:rgb(0, 0, 0);
+    font-family:  cursive;
+    margin-top:3vw;
+    font-size:4vw;
+    margin-bottom:2vw;
+    text-align: center;
+}
+
+.pcontainer h4 {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+.pcontainer p{
+    color:rgb(0, 0, 0);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+#container {
+   height:100%;
+}
+h1 {
+  text-align: center;
+  font-size: 80px; 
+  margin: 0;
+  padding: 0;
+  font-variant: large-caps;
+  font-family: Aclonica;
+  color: black;
+} 
+.h2a {
+  text-align: center;
+  font-size: 55px; 
+  margin: 0;
+  padding: 0;
+  font-variant: large-caps;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  color: rgba(244, 253, 255, 0.836);
+}
+h3 {
+  color: rgb(32, 44, 68);
+  font-size: 35px; 
+}
+h4 {
+  text-align: center;
+  font-size: 35px; 
+  margin: 0;
+  padding: 0;
+  font-variant: large-caps;
+  font-family: Aclonica;
+}
+h5 {
+  text-align: left;
+  font-size: 70px; 
+  margin: 0;
+  padding: 0;
+  font-variant: large-caps;
+  font-family: Aclonica;
+}
+h6 {
+  text-align: left;
+  font-size: 55px; 
+  margin: 2%;
+  padding: 0;
+  font-variant: large-caps;
+  font-family: Aclonica;
+  color:rgb(0, 0, 0);
+}
+.footer  {
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  text-align: center;
+  background: rgb(32, 44, 68);
+
+ }
+.footer p{
+  color: white;
+  font-size: 25px;
+ }
+.footer button{
+  background-color: rgb(95, 127, 192);
+  width: 125%;
+ }
+ .flex-container {
+  display: flex;
+   justify-content: center;
+  align-items: center;
+}
+
+.flex-container > div {
+  background-color:  rgb(32, 44, 68);
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+ .flex-container_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container_2 > div {
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+#left{    
+  float: left;  
+ }  
+ #right{    
+  float: right;  
+ } 
+
+body{
+    margin:0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.nav-bar {
+    background: rgb(49, 64, 95);
+    overflow: hidden;
+    position:fixed;
+    width: 100%;
+    top:0;
+    z-index: 10;
+}
+
+.nav-bar a {
+    float: right;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+    text-align: center;
+    padding: 2vw 1.5vw 2.7vw 1.5vw;
+    font-size: 19px;
+    margin:0;
+}
+  
+.nav-bar a:hover {
+    background-color: rgba(221, 221, 221, 0.856);
+    color: black;
+}
+
+.nav-bar a.active {
+    background-color: rgb(241, 77, 77);
+    color: white;
+}
+#bodyBlock{
+    max-width: 50vw;
+    max-height: 70vw;
+    background:  rgb(240, 250, 255);
+	margin: 2vw auto;
+	padding: 2vw;
+	border-radius: 2vw;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.formData{
+    font: 95% 'Roboto Condensed', sans-serif;
+	max-width: 35vw;
+	margin: 2vw auto;
+	padding: 1.5vw;
+    background:  rgb(240, 250, 255);
+}
+
+ fieldset{
+    border:none;
+}
+ #formHeader{
+    background: rgb(84, 177, 240);
+	padding: 2vw 0;
+	font-size: 140%;
+	text-align: center;
+	color: #fff;
+    margin: -1vw -2vw -2vw -2vw;
+    border-radius: 2vw;
+}
+
+label{
+	outline: none;
+    width: 20%;
+    margin:2.5vw 0;
+    padding-bottom: 3vw;
+	color: black;
+	font: 'Roboto Condensed', sans-serif;
+}
+.value{
+    margin-top: .3vw;
+    margin-bottom:1vw;
+    font: 'Roboto Condensed', sans-serif;
+}
+#year,#message, #date, #rcsid, #email, #firstName{
+    -webkit-transition: all 0.30s ease-in-out;
+	outline: none;
+	width: 100%;
+    border: 1px solid rgba(204, 204, 204, 0.527);
+    border-radius:.75vw;
+    padding:.75vw;
+    font-family: 'Roboto Condensed', sans-serif;
+}   
+ #year:focus, #message:focus, #date:focus, #rcsid:focus, #email:focus, #firstName:focus{
+    box-shadow: 0 0 5px rgb(84, 177, 240);
+	padding: 3%;
+    border: 1px solid rgb(84, 177, 240);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#submit{
+    font-family: 'Roboto Condensed', sans-serif;
+	width: 105%;
+	padding: 3%;
+	background:rgb(84, 177, 240);
+    border-style: none;	
+    border-radius: .75vw;
+    color: #fff;
+    font-size: 1.5vw;
+margin:none;}
+
+hr {
+  width: 65%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(32, 44, 68);
+  border: 0 none;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  margin: 0 1.5%;
+  width: 63%;
+}
+.card a{
+  font-size: 14px;
+  font: Courier New (monospace);
+}
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 430px;
+  height: 430px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: transparent;
+  color:rgb(32, 44, 68);
+  transform: rotateY(180deg);
+  font-weight: 300;
+}
+.flip-card p{
+  margin-left : 5%;
+  text-align: center;
+  font-size: 15px; 
+  font-family: Apple Chancery, cursive;
+  color: a9a9a9;
+  font-weight: 300;
+}
+p {
+  margin-left : 5%;
+  text-align: center;
+  font-size: 25px; 
+  font-family: Apple Chancery, cursive;
+  font-weight: 300;
+  color:rgb(32, 44, 68);
+}
+
+#contactBtn {
+  margin-left : 5%;
+  text-align: center;
+  font-size: 25px; 
+  font-family: Apple Chancery, cursive;
+  font-weight: 300;
+  background:  rgb(32, 44, 68);
+  border: solid;
+  border-color:  rgb(32, 44, 68) ;
+  color: white;
+  padding: 8%;
+}
+
+#logo {
+  width:220px;
+  height:70px;
+}
+
+#contactInfo {
+  list-style: none;
+  color: rgb(32, 44, 68); 
+  padding: 8%;
+}
