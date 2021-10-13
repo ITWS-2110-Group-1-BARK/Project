@@ -37,6 +37,14 @@ html,
     font-size: 4vw;
     font-family: 'Roboto Condensed', sans-serif;
   }
+  .pcontainer h5 {
+    color:rgb(0, 0, 0);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 3vw;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
 
 .pcontainer p{
     color:rgb(0, 0, 0);
@@ -124,13 +132,13 @@ h6 {
   padding: 20px;
   font-size: 30px;
 }
- .flex-container_2 {
+ #flex-container_2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-container_2 > div {
+#flex-container_2 > div {
   margin: 10px;
   padding: 20px;
   font-size: 30px;
@@ -175,6 +183,7 @@ body{
     background-color: rgb(241, 77, 77);
     color: white;
 }
+
 #bodyBlock{
     max-width: 50vw;
     max-height: 70vw;
@@ -255,12 +264,11 @@ hr {
   border: 0 none;
 }
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 400px;
+  max-width: 300px;
   margin: auto;
   text-align: center;
   margin: 0 1.5%;
-  width: 63%;
+  width: 60%;
 }
 .card a{
   font-size: 14px;
@@ -282,6 +290,9 @@ hr {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+.flip-card-inner img{
+  border-radius: 50%;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -311,6 +322,20 @@ hr {
   transform: rotateY(180deg);
   font-weight: 300;
 }
+.flip-card-back h5{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.flip-card-back li{
+  font-family: Apple Chancery, cursive;
+  font-size: 15px;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .flip-card p{
   margin-left : 5%;
   text-align: center;
@@ -351,3 +376,99 @@ p {
   color: rgb(32, 44, 68); 
   padding: 8%;
 }
+<<<<<<< Updated upstream
+=======
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+   
+/* Calculate the total width on the
+  basis of number of slides */
+  width: calc(728px * 4);
+ 
+/* Specify the animation with the
+  duration and speed */
+  animation: slide 10s ease infinite;
+}
+ 
+/* Set the background color
+of each of the slides */
+.slide:nth-child(n) {
+  background: transparent;
+}
+
+ 
+/* Define the animation
+for the slideshow */
+@keyframes slide {
+   
+/* Calculate the margin-left for
+  each of the slides */
+  20% {
+    margin-left: 0px;
+  }
+ 
+  40% {
+    margin-left: calc(-728px * 1);
+  }
+ 
+  60% {
+    margin-left: calc(-728px * 2);
+  }
+ 
+  80% {
+    margin-left: calc(-728px * 3);
+  }
+}
+
+/*Search bar*/
+{
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('search_icon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+>>>>>>> Stashed changes

@@ -1,0 +1,27 @@
+//Not yet utilized (Waiting to use data when we start backend database information using PHP)
+[
+    {
+      "name": "Aneesh",
+      "email" : "kadala2@rpi.edu"
+    },
+    {
+      "name": "John",
+      "email" : "jdoe@rpi.edu"
+    }
+    {
+        "name": "Aneesh",
+        "email" : "jdoe@rpi.edu"
+      },
+      {
+        "role": "John",
+        "email" : "jdoe@rpi.edu"
+      }
+      {
+        "name": "Aneesh",
+        "email" : "kadala2@rpi.edu"
+      },
+      {
+        "role": "John",
+        "email" : "jdoe@rpi.edu"
+      }
+]
