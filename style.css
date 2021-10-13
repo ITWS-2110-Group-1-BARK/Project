@@ -376,8 +376,6 @@ p {
   color: rgb(32, 44, 68); 
   padding: 8%;
 }
-<<<<<<< Updated upstream
-=======
 #slideshow {
   overflow: hidden;
   height: 510px;
@@ -471,4 +469,3 @@ for the slideshow */
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
->>>>>>> Stashed changes
