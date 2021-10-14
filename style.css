@@ -2,7 +2,7 @@ html,
 #body {
   background-position: center right; 
   background-repeat: no-repeat;
-  background-image: url("bg.jpeg");
+  background-image: url("./background.png");
   background-size: cover;
   
 }
@@ -155,7 +155,7 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 .nav-bar {
-    background: rgb(49, 64, 95);
+    background: #0fd1a1;
     overflow: hidden;
     position:fixed;
     width: 100%;
@@ -180,8 +180,8 @@ body{
 }
 
 .nav-bar a.active {
-    background-color: rgb(241, 77, 77);
-    color: white;
+    background-color: rgb(255, 251, 0);
+    color: black;
 }
 
 #bodyBlock{
