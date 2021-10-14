@@ -469,3 +469,11 @@ for the slideshow */
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+.hide {
+  display: none;
+}
+    
+.ul:hover + .hide {
+  display: block;
+}
