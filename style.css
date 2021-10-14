@@ -467,7 +467,7 @@ body {
   padding-right:22px;
   margin-top: 10px;
   margin-bottom:10px;
-  float:center;
+  float:right;
 }
 
 #signupForm .action-button-add:hover, #form .action-button-add:focus{
