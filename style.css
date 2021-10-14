@@ -1,11 +1,4 @@
-html,
-#body {
-  background-position: center right; 
-  background-repeat: no-repeat;
-  background-image: url("bg.jpeg");
-  background-size: cover;
-  
-}
+
 
 .pcontainer{
     font-family: sans-serif;
@@ -352,6 +345,192 @@ p {
   padding: 8%;
 }
 
+
+body {
+  height: 100%;
+  font-family: 'Raleway';
+  background: linear-gradient(to bottom right, rgb(118, 240, 240),rgb(243, 243, 148),white );
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#signupForm{
+  text-align: center;
+  margin: 80px 100px;
+  border-radius: 40px;
+}
+
+#signupForm fieldset{
+  background: rgb(240, 255, 253);
+  border-radius: 20px;
+  box-shadow: 0 0 30px 0 rgb(0, 0, 0, 0.4);
+  padding: 20px 50px;
+  max-width: 45vw;
+  margin-left: 21vw;
+}
+
+/*Only shows the first card on the page*/
+#signupForm fieldset:not(:first-of-type){
+  display:none;
+}
+
+.formTitle{
+  font-size: 20px;
+  color:navy;
+  margin-top:5px;
+  margin-bottom: 25px;
+  letter-spacing:1px;
+  font-family: 'Raleway';
+}
+
+#signupForm input, #signupForm textarea{
+  padding:20px;
+  border: 1px solid rgb(119, 116, 116);
+  margin-bottom: 15px;
+  /*so each input field is on separate line*/
+  width:100%;
+  border-radius:10px;
+  color: rgb(51, 45, 45);
+  font-family: 'Raleway';
+  font-size: 15px;
+  outline:none;
+}
+
+#signupForm input:focus, #form textarea:focus{
+  box-shadow: none;
+  border: 1px solid rgb(118, 240, 240);
+  transition: 0.5s ease-in;
+}
+
+#signupForm input.exp{
+  width:85%;
+  float:left;
+}
+
+#signupForm .action-button{
+  width: 100px;
+  background: rgb(243, 243, 148);
+  color: rgb(0, 0, 0);
+  border-radius: 22px;
+  cursor: pointer;
+  padding: 13px;
+  margin: 12px;
+}
+
+#signupForm .action-button:hover, #form .action-button:focus{
+  box-shadow: 0 0 0 4px rgb(243, 243, 148);
+}
+
+#signupForm .action-button-previous{
+  width: 100px;
+  background: rgb(118, 240, 240);
+  color: rgb(0, 0, 0);
+  border-radius: 22px;
+  cursor: pointer;
+  padding: 13px;
+  margin: 12px;
+}
+
+#signupForm .action-button-previous:hover, #form .action-button-previous:focus{
+  box-shadow: 0 0 0 4px rgb(118, 240, 240);
+}
+
+#progressbar{
+  margin-bottom: 20px;
+  overflow: hidden;
+  counter-reset:step;
+}
+
+
+#action-button-add{
+  width: 50px;
+  font-family:'Raleway';
+  background: rgb(120, 233, 116);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 12px;
+  padding-right:22px;
+  margin-top: 11px;
+  float:center;
+}
+
+#action-button-remove{
+  width: 75px;
+  font-family:'Raleway';
+  background: rgb(241, 80, 51);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 12px;
+  padding-right:22px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  float:center;
+}
+
+#signupForm .action-button-add:hover, #form .action-button-add:focus{
+  box-shadow: 0 0 0 4px white;
+  background: white;
+}
+
+#progressbar li{
+  margin-top:0;
+  margin-bottom:5px;
+  list-style-type: none;
+  color: black;
+  font-family: 'Raleway';
+  width: 27vw;
+  float: left;
+  position: relative;
+}
+
+/*increments each step of registration*/
+#progressbar li:before{
+  content: counter(step);
+  counter-increment: step;
+  width: 25px;
+  height: 25px;
+  display: block;
+  font-size: 13px;
+  color: black;
+  background:white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+  padding-top:3px;
+}
+
+/*horizontal bar*/
+#progressbar li:after{
+  content: '';
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  left: -50%;
+  margin-top:-23px;
+  background:white;
+  z-index: -1;
+}
+
+#progressbar li:first-child:after{
+  content:none;
+}
+
+#progressbar li.active:before, #progressbar li.active:after{
+  background: #fff600;
+  color: black;
+}
+
+.entry:not(:first-of-type)
+{
+  margin-top: 10px;
+}
+.glyphicon
+{
+  font-size: 12px;
+}
+=======
 /* beginning of login page styling */
 
 .login-form {
@@ -517,3 +696,4 @@ p.account a:hover{
 }
 
 /* end of login page stylinh */
+
