@@ -5,9 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="../style.css"/>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
 		
 </head>
@@ -19,6 +17,7 @@
         <li>Account Setup</li>
         <li>Interests</li>
       </ul>
+      <!--each fieldset is form of information for user to fill out-->
       <fieldset>
         <h2 class="formTitle">PERSONAL INFORMATION</h2>
         <input type="text" name="firstName" id="firstName" placeholder = "First Name" required>
@@ -39,34 +38,21 @@
               <h2 class="formTitle">INTERESTS</h2>
               <input type="text" name="interest" id="interest" placeholder = "Interest" required>
               <input type="text" class="exp" name="experience" id="experience" placeholder = "Experience ('Experienced'  'Moderate'  'None') " required>
-              <div class="repeater-heading">
-                  <button class="btn btn-primary pt-5 pull-right repeater-add-btn" id="action-button-add">Add
-                  </button>
-              </div>
-              <div class="clearfix"></div>
+              <!-- Add button to add another interest entry -->
+              <button class="btn btn-primary pt-5 pull-right repeater-add-btn" id="action-button-add">Add</button>
               <!-- Repeater Items -->
               <div class="items" data-group="test">
                   <!-- Repeater Content -->
                   <div class="item-content">
                       <h1 class="formTitle">Additional Interest</h1>
-                    <input type="text" name="interest" id="interest" placeholder = "Interest" required>
-                    <input type="text" class="exp" name="experience" id="experience" placeholder = "Experience ('Experienced'  'Moderate'  'None') " required>
+                      <input type="text" name="interest" id="interest" placeholder = "Interest" required>
+                      <input type="text" class="exp" name="experience" id="experience" placeholder = "Experience ('Experienced'  'Moderate'  'None') " required>
                   </div>
-                  <!-- Repeater Remove Btn -->
-                  <div class="pull-right repeater-remove-btn">
-                      <button class="btn btn-danger remove-btn" id="action-button-remove">
-                          Remove
-                      </button>
-                  </div>
-                  <div class="clearfix"></div>
+                      <button class="btn btn-danger remove-btn" id="action-button-remove">Remove</button>
               </div>
-             
           </div>
-          <!-- Repeater End -->
-              
-
-           
             <input type="button" name="previous" class="previous action-button-previous" value="previous">
+            <!--currently redirects to homepage.html-->
             <input type="button" name="submit" class="submit action-button" value="submit">
           
       </fieldset>
@@ -75,13 +61,11 @@
 
 
 
-    <script
+<script
     src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
     integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="/path/to/cdn/jquery.slim.min.js"></script>
-
 <script src="/path/to/jquery.repeater.js"></script>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" 
