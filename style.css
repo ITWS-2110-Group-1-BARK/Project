@@ -154,6 +154,7 @@ body{
   width: 100%;
   top:0;
   z-index: 10;
+  transition: background .4s ease-in-out;
 }
 
 .nav-bar a {
@@ -168,6 +169,7 @@ body{
 }
 
 .nav-bar a:hover {
+  transition: background .4s ease-in-out;
   background-color: rgba(221, 221, 221, 0.856);
   color: black;
 }
@@ -221,7 +223,7 @@ label{
     font: 'Roboto Condensed', sans-serif;
 }
 #year,#message, #date, #rcsid, #email, #firstName{
-    -webkit-transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
 	outline: none;
 	width: 100%;
     border: 1px solid rgba(204, 204, 204, 0.527);
