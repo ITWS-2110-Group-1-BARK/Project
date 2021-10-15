@@ -1,47 +1,55 @@
 
 
 .pcontainer{
-    font-family: sans-serif;
-    text-align: left;
-    background: #ffffff;
-    opacity:80%;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    padding: 20px;
-    float:center;
-    margin: 30px;
-    margin-top:10vw;
-    font-family: 'Roboto Condensed', sans-serif;
+  font-family: sans-serif;
+  text-align: left;
+  background: #ffffff;
+  opacity:80%;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  padding: 20px;
+  float:center;
+  margin: 30px;
+  margin-top:10vw;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .pcontainer h2{
-    color:rgb(0, 0, 0);
-    font-family:  cursive;
-    margin-top:3vw;
-    font-size:4vw;
-    margin-bottom:2vw;
-    text-align: center;
+  color:rgb(0, 0, 0);
+  font-family:  cursive;
+  margin-top:3vw;
+  font-size:4vw;
+  margin-bottom:2vw;
+  text-align: center;
 }
 
 .pcontainer h4 {
-    color:rgb(0, 0, 0);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-size: 4vw;
-    font-family: 'Roboto Condensed', sans-serif;
-  }
+  color:rgb(0, 0, 0);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 4vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.pcontainer h5 {
+  color:rgb(0, 0, 0);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 3vw;
+  font-family: 'Roboto Condensed', sans-serif;
+}
 
 .pcontainer p{
-    color:rgb(0, 0, 0);
-    font-family: 'Roboto Condensed', sans-serif;
+  color:rgb(0, 0, 0);
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #container {
-   min-height:100%;
-   position:relative;
+ min-height:100%;
+ position:relative;
 }
 #container {
-   height:100%;
+ height:100%;
 }
 h1 {
   text-align: center;
@@ -117,13 +125,13 @@ h6 {
   padding: 20px;
   font-size: 30px;
 }
- .flex-container_2 {
+#flex-container_2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-container_2 > div {
+#flex-container_2 > div {
   margin: 10px;
   padding: 20px;
   font-size: 30px;
@@ -140,33 +148,33 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 .nav-bar {
-    background: rgb(49, 64, 95);
-    overflow: hidden;
-    position:fixed;
-    width: 100%;
-    top:0;
-    z-index: 10;
+  background: #0fd1a1;
+  overflow: hidden;
+  position:fixed;
+  width: 100%;
+  top:0;
+  z-index: 10;
 }
 
 .nav-bar a {
-    float: right;
-    text-decoration: none;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-    text-align: center;
-    padding: 2vw 1.5vw 2.7vw 1.5vw;
-    font-size: 19px;
-    margin:0;
+  float: right;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 3%;
+  font-size: 19px;
+  margin:0;
 }
-  
+
 .nav-bar a:hover {
-    background-color: rgba(221, 221, 221, 0.856);
-    color: black;
+  background-color: rgba(221, 221, 221, 0.856);
+  color: black;
 }
 
 .nav-bar a.active {
-    background-color: rgb(241, 77, 77);
-    color: white;
+  background-color: rgb(255, 251, 0);
+  color: black;
 }
 #bodyBlock{
     max-width: 50vw;
@@ -312,6 +320,23 @@ hr {
   color: a9a9a9;
   font-weight: 300;
 }
+.flip-card-inner img{
+  border-radius: 50%;
+}
+.flip-card-back h5{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.flip-card-back li{
+  font-family: Apple Chancery, cursive;
+  font-size: 15px;
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 p {
   margin-left : 5%;
   text-align: center;
@@ -335,8 +360,8 @@ p {
 }
 
 #logo {
-  width:220px;
-  height:70px;
+  width:320px;
+  height:170px;
 }
 
 #contactInfo {
@@ -344,7 +369,6 @@ p {
   color: rgb(32, 44, 68); 
   padding: 8%;
 }
-
 
 body {
   height: 100%;
@@ -467,7 +491,7 @@ body {
   padding-right:22px;
   margin-top: 10px;
   margin-bottom:10px;
-  float:right;
+  float:center;
 }
 
 #signupForm .action-button-add:hover, #form .action-button-add:focus{
@@ -530,6 +554,68 @@ body {
 {
   font-size: 12px;
 }
+#slideshow {
+  overflow: hidden;
+  height: 510px;
+  width: 728px;
+  margin: 0 auto;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+   
+/* Calculate the total width on the
+  basis of number of slides */
+  width: calc(728px * 4);
+ 
+/* Specify the animation with the
+  duration and speed */
+  animation: slide 10s ease infinite;
+}
+ 
+/* Set the background color
+of each of the slides */
+.slide:nth-child(n) {
+  background: transparent;
+}
+
+ 
+/* Define the animation
+for the slideshow */
+@keyframes slide {
+   
+/* Calculate the margin-left for
+  each of the slides */
+  20% {
+    margin-left: 0px;
+  }
+ 
+  40% {
+    margin-left: calc(-728px * 1);
+  }
+ 
+  60% {
+    margin-left: calc(-728px * 2);
+  }
+ 
+  80% {
+    margin-left: calc(-728px * 3);
+  }
+}
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+=======
 =======
 /* beginning of login page styling */
 
@@ -694,6 +780,3 @@ p.account a:hover{
       border-top-right-radius: 8px;
   }
 }
-
-/* end of login page stylinh */
-
