@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style.css"/>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="explore.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <div id = "body">
@@ -22,7 +23,7 @@
 		<a class = "active" href="explore.html">Explore</a>
         <a href="../homepage.html">Homepage</a>
 	</div>
-    <div class="pcontainer">
+	<div class="pcontainer">
 		<h1>Find a Friend!</h1> 
         <p>Search for other users who share the same interests as yourselves to find new friends!</p>
         <div id="slideshow">
@@ -52,6 +53,7 @@
                     </h1>
                 </div>
             </div>
+            <input type="text" placeholder="Find Users..">
         </div>
     
 
@@ -59,130 +61,11 @@
     <hr/><hr/>
 </div>
 <div>
-    <p text-align: center>
-        <input type="search" id="search" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-    </p>
+	<p text-align:center>
+		<input type="search" id="search" name = "search" placeholder="Search for interests.." title="Type in a name">
+		<button onclick="myFunction()">Search</button>
+	</p>
 </div>
+<div id="dyn-cont"></div>
 
-	<div id = "flex-container_2">	
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<h3> John Doe </h3>
-					<img src="profile_images/default.png" alt="Avatar" style="width:300px;height:300px;">
-				</div>
-			<div class="flip-card-back">
-				<h3><a href="pages/events_activities.html">About John</a></h3>
-				<p>I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets. </p>
-				<div class = divHide>
-					<ul><h5>Interests</h5>
-						<div class = hide>
-							<li>Technology</li>
-							<li>Pets</li>
-							<li>Sports</li>
-						</div>
-					</ul>
-				</div>
-			</div>
-			</div>
-		</div>
-		
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<h3>Aneesh Kadali</h3>
-					<img src="profile_images/aneesh_kadali.jpeg" alt="Avatar" style="width:300px;height:300px;">
-				</div>
-			<div class="flip-card-back">
-				<h3><a href="pages/events_activities.html">About Aneesh</a></h3>
-				<p> Passionate, reliable, and hardworking student with an academic background in Information Technology and Computer Science seeking internship opportunities. Strong communication, leadership and technical skills. Ready to learn and contribute to the team.</p>
-                <ul><h5>Interests</h5>
-                    <li>Technology</li>
-                    <li>Security</li>
-                    <li>Data Analysis</li>
-                    <li>Dogs</li>
-                    <li>Baseball</li>
-
-                </ul>
-            </div>
-			</div>
-		</div>
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<h3> John Doe </h3>
-					<img src="profile_images/default.png" alt="Avatar" style="width:300px;height:300px;">
-				</div>
-			<div class="flip-card-back">
-				<h3><a href="pages/events_activities.html">About John</a></h3>
-				<p>I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets. </p>
-                <ul><h5>Interests</h5>
-                    <li>Technology</li>
-                    <li>Pets</li>
-                    <li>Sports</li>
-
-                </ul>
-			</div>
-			</div>
-		</div>
-	</div>
-    <div id = "flex-container_2">	
-		<!-- Information Regarding How to Join -->
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<h3> John Doe </h3>
-					<img src="profile_images/default.png" alt="Avatar" style="width:300px;height:300px;">
-				</div>
-			<div class="flip-card-back">
-				<h3><a href="pages/events_activities.html">About John</a></h3>
-				<p>I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets. </p>
-                <ul><h5>Interests</h5>
-                    <li>Technology</li>
-                    <li>Pets</li>
-                    <li>Sports</li>
-
-                </ul>
-			</div>
-			</div>
-		</div>
-		
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<h3> John Doe </h3>
-					<img src="profile_images/default.png" alt="Avatar" style="width:300px;height:300px;">
-				</div>
-			<div class="flip-card-back">
-				<h3><a href="pages/events_activities.html">About John</a></h3>
-				<p>I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets. </p>
-                <ul><h5>Interests</h5>
-                    <li>Technology</li>
-                    <li>Pets</li>
-                    <li>Sports</li>
-
-                </ul>
-			</div>
-			</div>
-		</div>
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<h3> John Doe </h3>
-					<img src="profile_images/default.png" alt="Avatar" style="width:300px;height:300px;">
-				</div>
-			<div class="flip-card-back">
-				<h3><a href="pages/events_activities.html">About John</a></h3>
-				<p>I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets. </p>
-                <ul><h5>Interests</h5>
-                    <li>Technology</li>
-                    <li>Pets</li>
-                    <li>Sports</li>
-
-                </ul>
-			</div>
-			</div>
-		</div>
-	</div>
-</div>
 </html>
