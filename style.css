@@ -805,7 +805,6 @@ p.account a:hover{
   opacity:80%;
   box-shadow: 0 0 10px rgb(0, 0, 0);
   padding: 15px;
-  float:center;
   margin: 5%;
   margin-top:10%;
   /* font-family: 'Roboto Condensed', sans-serif; */
@@ -993,24 +992,6 @@ p.account a:hover{
   margin-left: -90%;
   font-size: 110%;
   color:rgb(4, 99, 161);
-}
-
-.title_underline {
-  width: 95%;
-  height: 1px;
-  margin-left: 1%;
-  margin-top: 0%;
-  background-color: rgb(32, 44, 68);
-  border: 0 none;
-}
-
-.title_underline_2 {
-  width: 95%;
-  height: .7px;
-  margin-left: 1%;
-  margin-top: 0%;
-  background-color: rgb(32, 44, 68);
-  border: 0%;
 }
 
 
