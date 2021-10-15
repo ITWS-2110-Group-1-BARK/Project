@@ -615,15 +615,13 @@ for the slideshow */
   padding: 0;
   margin: 0;
 }
-=======
-=======
 /* beginning of login page styling */
 
 .login-form {
+  font-family: 'Raleway';
   position: relative;
   min-height: 100vh;
   z-index: 0;
-  background: lightskyblue;
   padding: 40px;
   justify-content: center;
   display: grid;
@@ -632,12 +630,15 @@ for the slideshow */
 }
 
 .cnt {
+  font-family: 'Raleway';
   max-width: 50%;
+  max-width: 800px;
   margin: 0 auto;
   padding-top: 100px;
 }
 
 .login-form h1{
+  font-family: 'Raleway';
   text-align: center;
   font-size: 2.5em;
   font-weight: 400;
@@ -645,6 +646,7 @@ for the slideshow */
 }
 
 .login-form h2{
+  font-family: 'Raleway';
   font-size: 30px;
   line-height: 40px;
   margin-bottom: 5px;
@@ -654,12 +656,14 @@ for the slideshow */
 }
 
 .login-form .main {
+  font-family: 'Raleway';
   position: relative;
   display: flex;
   margin: 30px 0;
 }
 
 .cnt2 {
+  font-family: 'Raleway';
   flex-basis: 50%;
   padding: 3em 3em;
   background: #fff;
@@ -693,6 +697,7 @@ for the slideshow */
 
 .lbtn,
 input{
+  font-family: 'Raleway';
   border-radius: 35px;
 }
 
@@ -741,8 +746,12 @@ input{
 .login-form button:hover {
   background: lightskyblue;
 }
+p.account {
+  font-family: 'Raleway';
+}
 
 p.account a{
+  font-family: 'Raleway';
   text-align: center;
   padding-top: 20px;
   padding-bottom: 0;
