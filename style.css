@@ -154,6 +154,7 @@ body{
   width: 100%;
   top:0;
   z-index: 10;
+  transition: background .4s ease-in-out;
 }
 
 .nav-bar a {
@@ -168,12 +169,13 @@ body{
 }
 
 .nav-bar a:hover {
+  transition: background .4s ease-in-out;
   background-color: rgba(221, 221, 221, 0.856);
   color: black;
 }
 
 .nav-bar a.active {
-  background-color: rgb(255, 251, 0);
+  opacity: 90%;
   color: black;
 }
 #bodyBlock{
@@ -198,13 +200,13 @@ body{
     border:none;
 }
  #formHeader{
-    background: rgb(84, 177, 240);
+  background: rgb(84, 177, 240);
 	padding: 2vw 0;
 	font-size: 140%;
 	text-align: center;
 	color: #fff;
-    margin: -1vw -2vw -2vw -2vw;
-    border-radius: 2vw;
+  margin: -1vw -2vw -2vw -2vw;
+  border-radius: 2vw;
 }
 
 label{
@@ -221,7 +223,7 @@ label{
     font: 'Roboto Condensed', sans-serif;
 }
 #year,#message, #date, #rcsid, #email, #firstName{
-    -webkit-transition: all 0.30s ease-in-out;
+  -webkit-transition: all 0.30s ease-in-out;
 	outline: none;
 	width: 100%;
     border: 1px solid rgba(204, 204, 204, 0.527);
@@ -360,8 +362,9 @@ p {
 }
 
 #logo {
-  width:320px;
-  height:170px;
+  margin-top: 1%;
+  margin-left: 1%;
+  width:9.7%;
 }
 
 #contactInfo {
@@ -788,4 +791,229 @@ p.account a:hover{
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
   }
+}
+
+/* end of login page stylinh */
+
+
+
+/* Start of Profile page styling */
+
+.profile_container {
+  text-align: left;
+  background: #f5fdff;
+  opacity:80%;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  padding: 15px;
+  margin: 5%;
+  margin-top:10%;
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: Raleway;
+}
+
+
+#profile_picture {
+  display: inline-block;
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  border: 4px solid rgb(128, 204, 255);
+  position: relative;
+  top: -9vh;
+  left: -9vh;
+  transition: border .2s ease-in-out;
+}
+
+#profile_picture:hover {
+  transition: border .2s ease-in-out;
+  border: 4px solid rgb(255, 109, 109);
+}
+
+/* .profile_container {
+  clear: both;
+} */
+
+.profile_header {
+  display:inline-block;
+  vertical-align: top;
+  padding-top: 2%;
+}
+
+
+#username {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-family: Raleway;
+  font-size: 4vw;
+}
+
+#mini_username {
+  font-family: Raleway;
+  font-size: 20px;
+  color: rgb(82, 82, 82);
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2d3031;
+  transform-origin: middle;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: middle;
+}
+
+
+
+
+.social_media_header {
+  float:right;
+  width: 30%;
+}
+
+.social_media_header_2 {
+  float:right;
+  padding-left: 4%;
+}
+
+.social_media_header a img{
+  width: 50px;
+  height: 50px;
+  transition: opacity .2s ease-in-out;
+}
+
+.social_media_header a img:hover{
+  opacity:0.7;
+}
+
+.hover-underline-animation_social_media {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation_social_media:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6cdaff;
+  transform-origin: middle;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation_social_media:hover:after {
+  transform: scaleX(1);
+  transform-origin: middle;
+}
+
+
+.hover-underline-animation_3{
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation_3:after {
+  content: '';
+  position: absolute;
+  width: 96%;
+  transform: scaleX(1);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #161616;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.hover-underline-animation_3:hover:after {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+
+
+.description_container {
+  background-color:rgba(164, 229, 255, 0.322);
+  width: 100%;
+  
+}
+
+.desc_header {
+  font-size: 35px;
+  margin:0%;
+  margin-top:1%;
+  margin-left:1%;
+  width: 100%;
+  
+}
+#desc {
+  text-align: left;
+  font-family: Raleway;
+  font-size: 130%;
+  margin:0%;
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: 1%;
+}
+
+#contact_info {
+  margin-left: 4%;
+  width: 110%;
+}
+
+.contact_row {
+  line-height: 220%;
+}
+
+.contact_row_title {
+  font-family: Raleway;
+  font-size: 140%;
+}
+
+.contact_text{
+  margin-left: -90%;
+  font-size: 110%;
+  color:rgb(4, 99, 161);
+}
+
+
+
+
+.interest_block {
+  display: inline-block;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  font-family: Raleway;
+  font-size: 130%;
+  width: 5%;
+  height: 5%;
+  padding-left: 9%;
+  padding-right: 9%;
+  line-height: 300%;
+  margin-left: 4.5%;
+  margin-top: 1.5%;
+  margin-right: 4.5%;
+  margin-bottom: 1%;
+  background-color:rgb(125, 203, 255);
+  border: 3px solid rgb(85, 187, 255);
+  border-radius: 8px;
 }
