@@ -632,7 +632,7 @@ for the slideshow */
 }
 
 .cnt {
-  max-width: 800px;
+  max-width: 50%;
   margin: 0 auto;
   padding-top: 100px;
 }
