@@ -1,0 +1,106 @@
+//Not yet utilized (Waiting to use data when we start backend database information using PHP)
+{
+    "user_1":[
+        {
+            "role": "John",
+            "email" : "jdoe@rpi.edu",
+            "description" : "I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets.",
+            "interests":[
+                {
+                    "interest_1": "Technology",
+                    "interest_2": "Sports",
+                    "interest_3": "Pets"
+                }
+            ]
+
+        }
+    ]
+}
+{
+    "user_2" :[
+        {
+            "name": "Aneesh",
+            "email" : "kadala2@rpi.edu",
+            "description" : " Passionate, reliable, and hardworking student with an academic background in Information Technology and Computer Science seeking internship opportunities. Strong communication, leadership and technical skills. Ready to learn and contribute to the team.",
+            "interests":[
+                {
+                    "interest_1": "Technology",
+                    "interest_2": "Security",
+                    "interest_3": "Data Analysis",
+                    "interest_4": "Dogs",
+                    "interest_5": "Baseball",
+                }
+            ]
+        },
+    ]
+}
+{
+    "user_3":[
+        {
+            "role": "John",
+            "email" : "jdoe@rpi.edu",
+            "description" : "I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets.",
+            "interests":[
+                {
+                    "interest_1": "Technology",
+                    "interest_2": "Sports",
+                    "interest_3": "Pets"
+                }
+            ]
+
+        }
+    ]
+}
+{
+    "user_4":[
+        {
+            "role": "John",
+            "email" : "jdoe@rpi.edu",
+            "description" : "I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets.",
+            "interests":[
+                {
+                    "interest_1": "Technology",
+                    "interest_2": "Sports",
+                    "interest_3": "Pets"
+                }
+            ]
+
+        }
+    ]
+}
+{
+    "user_5":[
+        {
+            "role": "John",
+            "email" : "jdoe@rpi.edu",
+            "description" : "I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets.",
+            "interests":[
+                {
+                    "interest_1": "Technology",
+                    "interest_2": "Sports",
+                    "interest_3": "Pets"
+                }
+            ]
+
+        }
+    ]
+}
+{
+    "user_6":[
+        {
+            "role": "John",
+            "email" : "jdoe@rpi.edu",
+            "description" : "I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other's pets.",
+            "interests":[
+                {
+                    "interest_1": "Technology",
+                    "interest_2": "Sports",
+                    "interest_3": "Pets"
+                }
+            ]
+
+        }
+
+    ]
+}
+        
