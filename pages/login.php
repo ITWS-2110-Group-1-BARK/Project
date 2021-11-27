@@ -28,9 +28,9 @@
             <div class="main">
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
-                    <form action="#" method="post">
-                        <input type="text" name="name" placeholder="Email" required autofocus="" >
-                        <input type="password" name="pwd" placeholder="Password">
+                    <form action="db.php" method="post">
+                        <input type="text" name="username" placeholder="Username" required autofocus="" >
+                        <input type="password" name="password" placeholder="Password">
                         <button class="lbtn" type="submit">Log In</button>
                     </form>
                     <p class="account">Don't have an account? <a href="signup.html">Register</a></p>
