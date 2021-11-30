@@ -1,59 +1,45 @@
-<?php 
-session_start(); 
-// create or continue
+<?php   
+    $user = "root";
+    $pass = "briankeith4";
 
-$dbhost= "localhost";
-$dbusername= "root";
-$dbpassword = "briankeith4";
-$dbname = "project";
+    // destroy any active sessions
+    session_start();
+    $_SESSION = array();
+    session_destroy();
+    $_SESSION['logon'] = false;
 
-$conn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
-if (!$conn) {
-    echo "Connection failed!";
-}
-
-if (isset($_POST['username']) && isset($_POST['password'])) {
-    function validate($data) {
-       $data = trim($data);
-       $data = stripslashes($data);
-       $data = htmlspecialchars($data);
-       return $data;
+    // create connection
+    $dbconn = new PDO("mysql:host=localhost;dbname=project",$user,$pass);
+    // check connection
+    if (!$dbconn) {
+       echo "Connection failed!";
     }
+    // if the info was submitted
+    if (isset($_POST['username']) && isset($_POST['password'])){
+        // trim sql injections!
+        $user = htmlspecialchars(trim($_POST["username"]));
+        $code =htmlspecialchars(trim($_POST["password"]));
 
-    $uname = validate($_POST['username']);
-    $pass = validate($_POST['password']);
+        $hash= hash("sha256", $code);
+        $code = "";
 
-    if (empty($uname)) {
-        header("Location: login.php?error=User Name is required");
-        exit();
-    } else if(empty($pass)) {
-        header("Location: login.php?error=Password is required");
-        exit();
-    } else {
-        $sql = "SELECT * FROM users WHERE username='$uname' AND password='$pass'";
-        $result = mysqli_query($conn, $sql);
-        if (mysqli_num_rows($result) === 1) {
-            $row = mysqli_fetch_assoc($result);
-            // print_r($row);
-            if ($row['username'] === $uname && $row['password'] === $pass) {
-                echo "Logged in!";
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['name'] = $row['name'];
-                $_SESSION['id'] = $row['id'];
-                $_SESSION['is_admin'] = $row['is_admin'];
-                header("Location: admin.php");
-                exit();
-            } else {
-                header("Location: login.php?error=Incorrect");
-                exit();
-            }
-        } else {
-            header("Location: login.php?error=Incorrect");
-            exit();
+        // query to check for user/password
+        $query = "SELECT * FROM users WHERE username='$uname' AND password='$hash'";
+        $result = $dbconn->query($query);
+        $entry = $result->fetch();
+        session_start();
+        // user is logged on, save session in
+        $_SESSION['username'] = $user;
+        $_SESSION['logon'] = true;                      
+        $_SESSION['userid'] = $entry["id"];
+        $_SESSION['fname'] = $entry['fname'];
+        $_SESSION['lname'] = $entry['lname'];
+        $_SESSION['email'] = $entry['email'];
+        $_SESSION['is_admin'] = $entry['is_admin'];
+        // add pages based off admin
+        header("Location: admin.php");
     }
-  }
-} else {
-  header("Location: index.php?error=not here");
-  exit();
-}
+    else {
+        header("Location: login.html");
+    }
 ?>
