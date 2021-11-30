@@ -16,7 +16,7 @@
     <!-- The navigation bar -->
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
-		<a href="signup.html">Sign Up</a>
+		<a href="signup.php">Sign Up</a>
 		<a class = "active" href="login.html">Login</a>
 		<a href="profile.html">Profile</a>
 		<a href="explore.html">Explore</a>

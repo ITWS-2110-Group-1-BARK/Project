@@ -3,7 +3,7 @@ var current, next, previous;
 
 $(".next").click(function(){
 
-  current =$(this).parent();
+  current = $(this).parent();
   next = $(this).parent().next();
 
   /*gets the next li in progress bar and sets it to 'active'*/
@@ -25,9 +25,6 @@ $(".previous").click(function(){
 
 });
 
-$(".submit").click(function(){
-    window.location.href = "../homepage.html";
-});
 
 $(function(){
 

@@ -1,3 +1,7 @@
+<?php
+// define variables and set to empty values
+$nameErr ="";
+?>
 <!DOCTYPE html>
 <head lang="en">
     <title>Sign-Up</title>
@@ -15,14 +19,15 @@
 <body class="signupBody">
     <!-- The navigation bar -->
 	<div class="nav-bar">
-        <img id="logo" src="../logo.png" alt= "LOGO">
-        <a class = "active" href="signup.html">Sign Up</a>
-        <a href="login.html">Login</a>
-        <a href="profile.html">Profile</a>
-        <a href="explore.html">Explore</a>
+		<img id="logo" src="../logo.png" alt= "LOGO">
+		<a class = "active" href="#">Sign Up</a>
+		<a  href="login.php">Login</a>
+		<a href="profile.html">Profile</a>
+		<a href="explore.html">Explore</a>
         <a href="../homepage.html">Homepage</a>
-    </div>
-    <form id="signupForm">
+	</div>
+    
+    <form action="register.php" id="signupForm"  method="post">
       <ul id="progressbar">
         <li class="active">Personal Details</li>
         <li>Account Setup</li>
@@ -36,35 +41,28 @@
         <input type="text" name="age" id="age" placeholder = "Age" required>
         <input type="button" name="next" class="next action-button" value="next">
       </fieldset>
+
       <fieldset>
           <h2 class="formTitle">ACCOUNT SETUP</h2>
-          <input type="text" name="email" id="email" placeholder = "RPI email" required>
+          <input type="text" name="email" id="email" placeholder = "Email" required>
+          <input type="text" name="usernamei" id="usernamei" placeholder = "Username" required>
           <input type="text" name="password" id="password" placeholder = "Password" required>
           <input type="button" name="previous" class="previous action-button-previous" value="previous">
           <input type="button" name="next" class="next action-button" value="next">
       </fieldset>
       <fieldset>
-          <div id="repeater">
               <!-- Repeater Heading -->
               <h2 class="formTitle">INTERESTS</h2>
-              <input type="text" name="interest"  placeholder = "Interest" required>
-              <input type="text" class="exp" name="experience"  placeholder = "Experience ('Experienced'  'Moderate'  'None') " required>
-              <!-- Add button to add another interest entry -->
-              <button class="btn btn-primary pt-5 pull-right repeater-add-btn" id="action-button-add">Add</button>
-              <!-- Repeater Items -->
-              <div class="items" data-group="test">
-                  <!-- Repeater Content -->
-                  <div class="item-content">
-                      <h1 class="formTitle">Additional Interest</h1>
-                      <input type="text" name="interest" id="interest" placeholder = "Interest" required>
-                      <input type="text" class="exp" name="experience" id="experience" placeholder = "Experience ('Experienced'  'Moderate'  'None') " required>
-                  </div>
-                      <button class="btn btn-danger remove-btn" id="action-button-remove">Remove</button>
-              </div>
-          </div>
+              <input type="text" name="interest" id="interest" placeholder = "Interest" required>
+              <input type="text" name="interest2" id="interest2" placeholder = "Interest">
+              <input type="text" name="interest3" id="interest3" placeholder = "Interest">
+              <input type="text" name="interest4" id="interest4" placeholder = "Interest">
+              <input type="text" name="interest5" id="interest5" placeholder = "Interest">
+             
             <input type="button" name="previous" class="previous action-button-previous" value="previous">
             <!--currently redirects to homepage.html-->
-            <input type="button" name="submit" class="submit action-button" value="submit">
+            <button type="submit" id="redirect" name="redirect" class="submit action-button">submit</button> 
+            
           
       </fieldset>
     </form>
