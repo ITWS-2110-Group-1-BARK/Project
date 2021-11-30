@@ -14,22 +14,30 @@
     if (!$dbconn) {
        echo "Connection failed!";
     }
-
     // if the info was submitted
-    if (isset($_POST['username']) && isset($_POST['password'])){
-        // trim sql injections!
-        $user = htmlspecialchars(trim($_POST["username"]));
-        $code =htmlspecialchars(trim($_POST["password"]));
 
-        $hash= hash("sha256", $code);
-        $code = "";
+    // trim sql injections!
+    $user = htmlspecialchars(trim($_POST["username"]));
+    $code =htmlspecialchars(trim($_POST["password"]));
 
+    $hash= hash("sha256", $code);
+    $code = "";
+
+    if (empty($user)) {
+        header("Location: login.php?error=User Name is required");
+        exit();
+    } else if(empty($hash)) {
+        header("Location: login.php?error=Password is required");
+        exit();
+    } else {
         // query to check for user/password
         $query = "SELECT * FROM users WHERE username='$user' AND password='$hash'";
         $result = $dbconn->query($query);
         $entry = $result->fetch();
+
+        // CHECK THAT RESULT IS RETURNED
+        // user session started
         session_start();
-        // user is logged on, save session in
         $_SESSION['username'] = $user;
         $_SESSION['logon'] = true;                      
         $_SESSION['userid'] = $entry["id"];
@@ -39,8 +47,6 @@
         $_SESSION['is_admin'] = $entry['is_admin'];
         // add pages based off admin
         header("Location: admin.php");
-    }
-    else {
-        header("Location: badlogin.html");
+        
     }
 ?>

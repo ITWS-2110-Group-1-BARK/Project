@@ -29,7 +29,7 @@
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
                     <form action="db.php" method="post">
-                        <input type="text" name="username" placeholder="Username" required autofocus="" >
+                        <input type="text" name="username" placeholder="Username">
                         <input type="password" name="password" placeholder="Password">
                         <button type="submit">Login</button>
                     </form>
