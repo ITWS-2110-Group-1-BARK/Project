@@ -1043,6 +1043,19 @@ p.account a:hover{
   transition: border .2s ease-in-out;
 }
 
+
+#profile_picture {
+  display: inline-block;
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  border: 4px solid rgb(128, 204, 255);
+  position: relative;
+  top: -9vh;
+  left: -9vh;
+  transition: border .2s ease-in-out;
+}
+
 #profile_picture:hover {
   transition: border .2s ease-in-out;
   border: 4px solid rgb(255, 109, 109);
