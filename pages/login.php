@@ -1,3 +1,52 @@
+<?php   
+   $user = "root";
+   $pass = "briankeith4";
+
+   // destroy any active sessions
+   session_start();
+   $_SESSION = array();
+   session_destroy();
+   $_SESSION['logon'] = false;
+
+   // create connection
+   $dbconn = new PDO("mysql:host=localhost;dbname=project",$user,$pass);
+   // check connection
+   if (!$dbconn) {
+       echo "Connection failed!";
+   }
+
+  // sets login var to status of login button
+  $login = isset($_POST["login"]);
+
+  // if the login button was clicked
+  if ($login){
+     // trim sql injections!
+     $user = htmlspecialchars(trim($_POST["username"]));
+     $code =htmlspecialchars(trim($_POST["password"]));
+
+    // query to check for user/password
+    $query = "SELECT * FROM `users` WHERE `username`=`$user`";
+    $result = $dbconn->query($query);
+    $entry = $result->fetch();
+
+    // hash password
+    $hashpass= hash('sha256', $code);
+    $code = "";
+    if($user === $entry["username"] && $hashpass === $entry["password"]) {
+        session_start();
+        // user is logged on, save session in
+        $_SESSION['username'] = $user;
+        $_SESSION['logon'] = true;                      
+        $_SESSION['userid'] = $entry["id"];
+        header("Location: explore.html");
+    }
+    else {
+        header("Location: login.html");
+    }
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +77,11 @@
             <div class="main">
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
-                    <form action="db.php" method="post">
+                    <form action="db.php" method="post" action="login.php">
                         <input type="text" name="username" placeholder="Username" required autofocus="" >
                         <input type="password" name="password" placeholder="Password">
-                        <button class="lbtn" type="submit">Log In</button>
+                        <input id="lbtn" name="login" type="submit" value="Login" />
                     </form>
-                    <p class="account">Don't have an account? <a href="signup.html">Register</a></p>
                 </div>
                 <div class="form-img">
                     <img src="../dogs2.jpg" alt="">
