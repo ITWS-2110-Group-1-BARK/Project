@@ -24,28 +24,34 @@
      $user = htmlspecialchars(trim($_POST["username"]));
      $code =htmlspecialchars(trim($_POST["password"]));
 
+     $hash= hash("sha256", $code);
+     $code = "";
+
     // query to check for user/password
-    $query = "SELECT * FROM `users` WHERE `username`=`$user`";
+    $query = "SELECT * FROM users WHERE username='$uname' AND password='$hash'";
     $result = $dbconn->query($query);
     $entry = $result->fetch();
 
-    // hash password
-    $hashpass= hash('sha256', $code);
-    $code = "";
-    if($user === $entry["username"] && $hashpass === $entry["password"]) {
+    if(true) {
         session_start();
         // user is logged on, save session in
         $_SESSION['username'] = $user;
         $_SESSION['logon'] = true;                      
         $_SESSION['userid'] = $entry["id"];
-        header("Location: explore.html");
+        // add pages based off admin
+        $is_admin = $entry["is_admin"];
+        if ($is_admin == 1) {
+            header("Location: explore.php");
+        } else {
+            header("Location: explore.php");
+        }
+        
     }
     else {
         header("Location: login.html");
     }
   }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +83,7 @@
             <div class="main">
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
-                    <form action="db.php" method="post" action="login.php">
+                    <form action="login.php" method="post">
                         <input type="text" name="username" placeholder="Username" required autofocus="" >
                         <input type="password" name="password" placeholder="Password">
                         <input id="lbtn" name="login" type="submit" value="Login" />
