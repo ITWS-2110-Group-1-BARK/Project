@@ -34,19 +34,22 @@
         $query = "SELECT * FROM users WHERE username='$user' AND password='$hash'";
         $result = $dbconn->query($query);
         $entry = $result->fetch();
-
-        // CHECK THAT RESULT IS RETURNED
-        // user session started
-        session_start();
-        $_SESSION['username'] = $user;
-        $_SESSION['logon'] = true;                      
-        $_SESSION['userid'] = $entry["id"];
-        $_SESSION['fname'] = $entry['fname'];
-        $_SESSION['lname'] = $entry['lname'];
-        $_SESSION['email'] = $entry['email'];
-        $_SESSION['is_admin'] = $entry['is_admin'];
-        // add pages based off admin
-        header("Location: admin.php");
         
+        if (!empty($entry)){
+            // CHECK THAT RESULT IS RETURNED
+            // user session started
+            session_start();
+            $_SESSION['username'] = $user;
+            $_SESSION['logon'] = true;                      
+            $_SESSION['userid'] = $entry["id"];
+            $_SESSION['fname'] = $entry['fname'];
+            $_SESSION['lname'] = $entry['lname'];
+            $_SESSION['email'] = $entry['email'];
+            $_SESSION['is_admin'] = $entry['is_admin'];
+            // add pages based off admin
+            header("Location: admin.php");
+        } else {
+            header("Location: login.php?error=User not found");
+        }
     }
 ?>
