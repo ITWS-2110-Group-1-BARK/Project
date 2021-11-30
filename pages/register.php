@@ -92,7 +92,7 @@ if(isset($_POST['redirect'])){
             $nextid = getnextid($dbconn);
             addNewInterest($dbconn,$nextid,$uname,$interest5);
         }
-        header("Location: ../homepage.html");
+        header("Location: ../login.php");
     }
 
 }
