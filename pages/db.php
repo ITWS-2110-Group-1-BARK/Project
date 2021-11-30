@@ -14,6 +14,7 @@
     if (!$dbconn) {
        echo "Connection failed!";
     }
+
     // if the info was submitted
     if (isset($_POST['username']) && isset($_POST['password'])){
         // trim sql injections!
@@ -24,7 +25,7 @@
         $code = "";
 
         // query to check for user/password
-        $query = "SELECT * FROM users WHERE username='$uname' AND password='$hash'";
+        $query = "SELECT * FROM users WHERE username='$user' AND password='$hash'";
         $result = $dbconn->query($query);
         $entry = $result->fetch();
         session_start();
@@ -40,6 +41,6 @@
         header("Location: admin.php");
     }
     else {
-        header("Location: login.html");
+        header("Location: badlogin.html");
     }
 ?>
