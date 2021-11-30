@@ -238,7 +238,7 @@ label{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#submit{
+#redirect{
     font-family: 'Roboto Condensed', sans-serif;
 	width: 105%;
 	padding: 3%;
@@ -413,7 +413,7 @@ body {
   font-family: 'Raleway';
 }
 
-#signupForm input, #signupForm textarea{
+#signupForm input, #signupForm textarea, #redirect{
   padding:20px;
   border: 1px solid rgb(119, 116, 116);
   margin-bottom: 15px;
