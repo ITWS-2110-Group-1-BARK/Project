@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2021 at 05:13 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Nov 30, 2021 at 08:43 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `profile_information` (
-  `username` varchar(255) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `description` varchar(5000) NOT NULL,
   `picture` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -39,7 +39,8 @@ CREATE TABLE `profile_information` (
 
 INSERT INTO `profile_information` (`username`, `description`, `picture`) VALUES
 ('doej', 'I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other pets', 'profile_images/default.png'),
-('kadala', 'I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other pets', 'profile_images/default.png');
+('kadala', 'I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other pets', 'profile_images/default.png'),
+('Raison163', 'I am a CS and ITWS dual major who loves dogs, playing video games, soccer, and reading novels. I am looking for people who would enjoy hanging out and talk about things such as current technology and recent books that have released while also having fun with each other\'s pets.', 'profile_pic.jpg');
 
 -- --------------------------------------------------------
 
@@ -48,20 +49,25 @@ INSERT INTO `profile_information` (`username`, `description`, `picture`) VALUES
 --
 
 CREATE TABLE `users` (
-  `username` varchar(255) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `password` varchar(255) NOT NULL,
   `fname` varchar(20) NOT NULL,
   `lname` varchar(20) NOT NULL,
-  `age` int(3) NOT NULL
+  `age` int(3) NOT NULL,
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`username`, `password`, `fname`, `lname`, `age`) VALUES
-('doej', 'Aneeshkadali_8234', 'John', 'Doe', 19),
-('kadala', 'Aneeshkadali_888', 'Aneesh', 'Kadali', 19);
+INSERT INTO `users` (`username`, `password`, `fname`, `lname`, `age`, `email`) VALUES
+('doej', 'Aneeshkadali_8234', 'John', 'Doe', 19, ''),
+('kadala', 'Aneeshkadali_888', 'Aneesh', 'Kadali', 19, ''),
+('kjohn543', 'da56d36bc13a1f53b61dbe82a9ece6b5643764c8a8e0ff8c4f26dbdaa8298bad', 'john', 'k', 19, 'kjohn@rpi.edu'),
+('Raison163', 'Testing', 'Brianna', 'Lopez', 19, ''),
+('ruchikas', 'ruchika1234', 'Ruchika', 'Singh', 21, 'singhr7@rpi.edu'),
+('someone123', '1752c49d6a57e63b78c08624584e81b71fce52f9d4d7104bd05fdcf48d3608ae', 'someone', 'new', 21, 'someone@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -71,7 +77,7 @@ INSERT INTO `users` (`username`, `password`, `fname`, `lname`, `age`) VALUES
 
 CREATE TABLE `user_interests` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `interest` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -80,14 +86,31 @@ CREATE TABLE `user_interests` (
 --
 
 INSERT INTO `user_interests` (`id`, `username`, `interest`) VALUES
+(0, 'ruchikas', 'hiking'),
 (1, 'doej', 'Movies'),
 (2, 'kadala', 'Movies'),
 (4, 'doej', 'Chess'),
-(5, 'kadala', 'Chess');
+(5, 'kadala', 'Chess'),
+(6, 'ruchikas', 'swimming'),
+(7, 'ruchikas', 'driving'),
+(8, 'ruchikas', 'driving'),
+(9, 'someone123', 'learning'),
+(10, 'someone123', 'driving'),
+(11, 'someone123', 'movies'),
+(12, 'someone123', 'dog walking'),
+(13, 'someone123', 'boxing'),
+(14, 'kjohn543', 'reading'),
+(15, 'kjohn543', 'driving');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `profile_information`
+--
+ALTER TABLE `profile_information`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `users`
@@ -99,17 +122,18 @@ ALTER TABLE `users`
 -- Indexes for table `user_interests`
 --
 ALTER TABLE `user_interests`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Constraints for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `user_interests`
+-- Constraints for table `user_interests`
 --
 ALTER TABLE `user_interests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  ADD CONSTRAINT `username` FOREIGN KEY (`username`) REFERENCES `users` (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

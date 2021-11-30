@@ -4,8 +4,8 @@ session_start();
 
 $dbhost= "localhost";
 $dbusername= "root";
-$dbpassword = "briankeith4";
-$dbname = "project";
+$dbpassword = "!";
+$dbname = "destined_duo";
 
 $conn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
 if (!$conn) {
@@ -38,8 +38,9 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
             if ($row['username'] === $uname && $row['password'] === $pass) {
                 echo "Logged in!";
                 $_SESSION['username'] = $row['username'];
-                $_SESSION['name'] = $row['name'];
-                $_SESSION['id'] = $row['id'];
+                $_SESSION['fname'] = $row['fname'];
+                $_SESSION['lname'] = $row['lname'];
+                $_SESSION['email'] = $row['email'];
                 $_SESSION['is_admin'] = $row['is_admin'];
                 header("Location: admin.php");
                 exit();

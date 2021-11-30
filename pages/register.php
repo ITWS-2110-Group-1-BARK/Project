@@ -4,7 +4,7 @@ session_start();
 
 $dbhost= "localhost";
 $dbusername= "root";
-$dbpassword = "mm+q8rCK";
+$dbpassword = "!";
 $dbname = "destined_duo";
 
 $dbconn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
