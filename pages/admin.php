@@ -2,10 +2,11 @@
     session_start(); 
 
     if ($_SESSION['is_admin'] == 1) {
-        // add admin 
-        header("Location: profile.php");
+        // add admin location
+        header("Location: explore.php");
     } else {
-        header("Location: profile.php");
+        header("Location: explore.php");
+        // add admin 
         exit();
     }
 ?>

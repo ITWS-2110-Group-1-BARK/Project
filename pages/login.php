@@ -17,10 +17,10 @@
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
 		<a href="signup.php">Sign Up</a>
-		<a class = "active" href="login.html">Login</a>
-		<a href="profile.html">Profile</a>
-		<a href="explore.html">Explore</a>
-        <a href="../homepage.html">Homepage</a>
+		<a class = "active" href="login.php">Login</a>
+		<a href="profile.php">Profile</a>
+		<a href="explore.php">Explore</a>
+        <a href="../homepage.php">Homepage</a>
 	</div>
     <div class="login-form">
         <!-- <h1>PAL</h1> -->
@@ -29,11 +29,10 @@
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
                     <form action="db.php" method="post">
-                        <input type="text" name="username" placeholder="Username" required autofocus="" >
+                        <input type="text" name="username" placeholder="Username">
                         <input type="password" name="password" placeholder="Password">
-                        <button class="lbtn" type="submit">Log In</button>
+                        <button type="submit">Login</button>
                     </form>
-                    <p class="account">Don't have an account? <a href="signup.html">Register</a></p>
                 </div>
                 <div class="form-img">
                     <img src="../dogs2.jpg" alt="">
@@ -43,3 +42,4 @@
     </div>    
 </body>
 </html>
+    
