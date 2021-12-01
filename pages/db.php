@@ -7,7 +7,6 @@
     $_SESSION = array();
     session_destroy();
     $_SESSION['logon'] = false;
-
     // create connection
     $dbconn = new PDO("mysql:host=localhost;dbname=project",$user,$pass);
     // check connection
