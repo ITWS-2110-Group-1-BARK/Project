@@ -14,11 +14,10 @@
     if (!$dbconn) {
        echo "Connection failed!";
     }
-    // if the info was submitted
 
     // trim sql injections!
-    $user = htmlspecialchars(trim($_POST["username"]));
-    $code =htmlspecialchars(trim($_POST["password"]));
+    $user = stripslashes(htmlspecialchars(trim($_POST["username"])));
+    $code = stripslashes(htmlspecialchars(trim($_POST["password"])));
 
     $hash= hash("sha256", $code);
     $code = "";
