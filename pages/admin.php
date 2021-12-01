@@ -6,6 +6,7 @@
         header("Location: explore.php");
     } else {
         header("Location: explore.php");
+        // add admin 
         exit();
     }
 ?>

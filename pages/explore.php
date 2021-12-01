@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style.css"/>
-    <script type="text/javascript" src="explore4.js"></script>
+    <script type="text/javascript" src="explore5_.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -18,7 +18,7 @@
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
 		<a href="signup.html">Sign Up</a>
-		<a href="login.php">Login</a>
+		<a href="login.html">Login</a>
 		<a href="profile.html">Profile</a>
 		<a class = "active" href="explore.html">Explore</a>
         <a href="../homepage.html">Homepage</a>
