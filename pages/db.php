@@ -1,6 +1,6 @@
 <?php   
     $user = "root";
-    $pass = "briankeith4";
+    $pass = "Aneeshkadali_888";
 
     // destroy any active sessions
     session_start();
@@ -8,7 +8,7 @@
     session_destroy();
     $_SESSION['logon'] = false;
     // create connection
-    $dbconn = new PDO("mysql:host=localhost;dbname=project",$user,$pass);
+    $dbconn = new PDO("mysql:host=localhost;dbname=destined_duo1",$user,$pass);
     // check connection
     if (!$dbconn) {
        echo "Connection failed!";

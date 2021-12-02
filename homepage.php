@@ -17,10 +17,11 @@
     <div class="nav-bar">
         <img id="logo" src="logo.png" alt= "LOGO">
         <a href="pages/signup.php">Sign Up</a>
-        <a href="pages/login.html">Login</a>
-        <a href="pages/profile.html">Profile</a>
+        <a href="logout.php">Logout</a>
+        <a href="pages/login.php">Login</a>
+        <a href="pages/profile.php">Profile</a>
         <a href="pages/explore.php">Explore</a>
-        <a class = "active" href="homepage.html">Homepage</a>
+        <a class = "active" href="homepage.php">Homepage</a>
     </div>
 	<div class="pcontainer">
 		<h1>About Us</h1> 
@@ -64,13 +65,13 @@
     </div>
     <hr/><hr/>
     <h6>Why Destined Duo?</h6> 
-	    <p> Those in college can use their credentials (for example, one’s school email, etc) to 
-            make an account and log in to be verified to be from a specific school so that students can be confident that they are meeting 
-            other students from the same college/university. All it takes is to create a post for an activity or to find someone who has the 
+	    <p> Destined Duo is a place that allows you interact with other individuals who may have the same interests as you and are a similar age as you.
+            If you are young person who is looking to make friends with people who share the similar interests Destined Duo is the way to find people like you.
+            All it takes is a quick search to find someone who has the 
             same interests as you in a certain activity, and now there is newfound friendship. This can be from creating study sessions for 
             different classes, to playing a sport or going to the gym with someone to connect with and spot you. It is limited to one person 
             per activity and through trying out different activities, one can meet a span of different people they would not have met had it 
-            not been through Destined Duo. As a college student, doing activities from school work to club/sports events is much more enjoyable 
+            not been through Destined Duo. Things such as completing school work and hanging out at club/sports events is much more enjoyable 
             when you can have someone to enjoy it with. Parents also can be relieved, knowing that their children are not alone and are enjoying 
             their college experience as a result of using Destined Duo to connect with others. The people you meet online and connect with could 
             be potential future friends for the next 4 years that they are in college, and beyond! 

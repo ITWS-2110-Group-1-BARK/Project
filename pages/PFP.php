@@ -4,8 +4,8 @@ try{
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-    $dbpassword = "Senpai12!";
-    $dbname = "destined_duo";
+    $dbpassword = "Aneeshkadali_888";
+    $dbname = "destined_duo1";
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 

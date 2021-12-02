@@ -17,6 +17,7 @@
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
 		<a href="signup.php">Sign Up</a>
+        <a href="logout.php">Logout</a>
 		<a class = "active" href="login.php">Login</a>
 		<a href="profile.php">Profile</a>
 		<a href="explore.php">Explore</a>
@@ -29,10 +30,11 @@
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
                     <form action="db.php" method="post">
-                        <input type="text" name="username" placeholder="Username">
+                        <input type="text" name="username" placeholder="Username" required autofocus="" >
                         <input type="password" name="password" placeholder="Password">
-                        <button type="submit">Login</button>
+                        <button class="lbtn" type="submit">Log In</button>
                     </form>
+                    <p class="account">Don't have an account? <a href="signup.html">Register</a></p>
                 </div>
                 <div class="form-img">
                     <img src="../dogs2.jpg" alt="">
@@ -42,4 +44,3 @@
     </div>    
 </body>
 </html>
-    

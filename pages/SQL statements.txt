@@ -5,3 +5,5 @@ INSERT INTO user_interests(username, interest) SELECT username, 'Sports' from us
 INSERT INTO profile_information(username, description, picture) SELECT username, 'I am ITWS major who loves loves dogs and am looking for people who would enjoy hanging out and talk about things such as current technology while also having fun with each other pets', 'profile_images/default.png' from users;
 
 SELECT fname, lname, description, picture FROM user_interests UI, profile_information PI, users U WHERE UI.username = PI.username AND UI.username = U.username AND UI.interest = 'Sports';
+
+SELECT interest, COUNT(*) FROM user_interests GROUP BY interest;
