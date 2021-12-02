@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../style.css"/>
-    <script type="text/javascript" src="explore5_.js"></script>
+    <script type="text/javascript" src="explore7_.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+<body onFocus="parent_disable();" onclick="parent_disable();">
 
 <div id = "body">
 		<!-- The navigation bar -->
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
-		<a href="signup.html">Sign Up</a>
-		<a href="login.html">Login</a>
-		<a href="profile.html">Profile</a>
-		<a class = "active" href="explore.html">Explore</a>
-        <a href="../homepage.html">Homepage</a>
+		<a href="signup.php">Sign Up</a>
+        <a href="logout.php">Logout</a>
+		<a href="login.php">Login</a>
+		<a href="profile.php">Profile</a>
+		<a class = "active" href="explore.php">Explore</a>
+        <a href="../homepage.php">Homepage</a>
 	</div>
 	<div class="pcontainer">
 		<h1>Find a Friend!</h1> 
@@ -67,5 +69,5 @@
 	</p>
 </div>
 <div id="dyn-cont"></div>
-
+<div id = "divBackground" style="position: fixed; z-index: 999; height: 100%; width: 100%; top: 0; left:0; background-color: Black; filter: alpha(opacity=60); opacity: 0.6; -moz-opacity: 0.8;display:none"></div>
 </html>

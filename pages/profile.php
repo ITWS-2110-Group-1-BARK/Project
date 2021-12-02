@@ -22,6 +22,10 @@
     <div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
         <a href="signup.php">Sign Up</a>
+<<<<<<< Updated upstream
+=======
+        <a href="logout.php">Logout</a>
+>>>>>>> Stashed changes
         <a href="login.php">Login</a>
 		<a class = "active" href="profile.php">Profile</a>
 		<a href="explore.php">Explore</a>

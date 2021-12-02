@@ -3,7 +3,7 @@ function myFunction() {
         search = '';
     search = document.getElementById('search').value;
     jQuery.ajax({
-        url: "explore_search2.php",
+        url: "explore_search3.php",
         data:'search='+search,
         type: "POST",
         success:function(response){
@@ -72,7 +72,33 @@ function myFunction1(){
         let p_tag = document.createElement('p');
         p_tag.innerHTML = description_x;
         divElement_c24.appendChild(p_tag);
+
+        let a_tag = document.createElement('a');
+        var link_text = document.createTextNode('Click Here for More Information');
+        a_tag.appendChild(link_text);
+        a_tag.target = 'popup';
+        a_tag.href = '#';
+        a_tag.onclick = myFunction2;
+        divElement_c24.appendChild(a_tag);
+
+
+
     
     }
     
 }
+function myFunction2() {
+    var popUpObj;
+    popUpObj=window.open("popup.php", "ModalPopUp",  "toolbar=no," + "scrollbars=no," +  "location=no," +  "statusbar=no," +
+    "menubar=no," + "resizable=0," +  "width=600," + "height=400," + "left = 490," +  "top=300"  );
+    popUpObj.focus();
+    LoadModalDiv();
+}
+function LoadModalDiv(){
+    var bcgDiv = document.getElementById("divBackground");
+    bcgDiv.style.display="block";
+}
+function HideModalDiv(){
+    var bcgDiv = document.getElementById("divBackground");
+    bcgDiv.style.display="none";
+ }

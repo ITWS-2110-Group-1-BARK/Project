@@ -4,8 +4,13 @@ session_start();
 
 $dbhost= "localhost";
 $dbusername= "root";
+<<<<<<< Updated upstream
 $dbpassword = "!";
 $dbname = "destined_duo";
+=======
+$dbpassword = "Aneeshkadali_888";
+$dbname = "destined_duo1";
+>>>>>>> Stashed changes
 
 $dbconn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
 if (!$dbconn) {
@@ -92,7 +97,17 @@ if(isset($_POST['redirect'])){
             $nextid = getnextid($dbconn);
             addNewInterest($dbconn,$nextid,$uname,$interest5);
         }
+<<<<<<< Updated upstream
         header("Location: ../login.php");
+=======
+        $sql3 = "INSERT INTO profile_information (username, description, picture) VALUES ('$uname','','profile_images/default.png')";
+        try{
+            mysqli_query($dbconn,$sql3); 
+        } catch(mysqli_sql_exception $e) {
+          echo $sql3 . "<br>" . $e->getMessage();
+        }
+        header("Location: login.php");
+>>>>>>> Stashed changes
     }
 
 }

@@ -2,8 +2,13 @@
     $search = '';
     $search = $_POST['search'];
     $user = 'root';
+<<<<<<< Updated upstream:pages/explore_search2.php
     $pass= '!';
     $dbh = new PDO('mysql:host=localhost;dbname=destined_duo', $user, $pass);
+=======
+    $pass= 'Aneeshkadali_888';
+    $dbh = new PDO('mysql:host=localhost;dbname=destined_duo1', $user, $pass);
+>>>>>>> Stashed changes:pages/explore_search3.php
 
     $query = "SELECT fname, lname, description, picture FROM user_interests UI, profile_information PI, users U WHERE UI.username = PI.username AND UI.username = U.username AND UI.interest =  '$search' ;";
     //echo $query;
