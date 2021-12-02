@@ -17,14 +17,9 @@
     <div class="nav-bar">
         <img id="logo" src="logo.png" alt= "LOGO">
         <a href="pages/signup.php">Sign Up</a>
-<<<<<<< Updated upstream:homepage.html
-        <a href="pages/login.html">Login</a>
-        <a href="pages/profile.html">Profile</a>
-=======
         <a href="logout.php">Logout</a>
         <a href="pages/login.php">Login</a>
         <a href="pages/profile.php">Profile</a>
->>>>>>> Stashed changes:homepage.php
         <a href="pages/explore.php">Explore</a>
         <a class = "active" href="homepage.php">Homepage</a>
     </div>

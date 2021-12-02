@@ -21,18 +21,11 @@ $nameErr ="";
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
 		<a class = "active" href="#">Sign Up</a>
-<<<<<<< Updated upstream:pages/signup.php
-		<a  href="login.php">Login</a>
-		<a href="profile.php">Profile</a>
-		<a href="explore.php">Explore</a>
-        <a href="../homepage.html">Homepage</a>
-=======
     <a href="logout.php">Logout</a>
 		<a  href="login.php">Login</a>
 		<a href="profile.php">Profile</a>
 		<a href="explore.php">Explore</a>
         <a href="../homepage.php">Homepage</a>
->>>>>>> Stashed changes:pages/signup.html
 	</div>
     
     <form action="register.php" id="signupForm"  method="post">

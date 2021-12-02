@@ -4,13 +4,8 @@ try{
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-<<<<<<< Updated upstream
-    $dbpassword = "!";
-    $dbname = "destined_duo";
-=======
     $dbpassword = "Aneeshkadali_888";
     $dbname = "destined_duo1";
->>>>>>> Stashed changes
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
