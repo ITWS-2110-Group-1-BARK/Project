@@ -30,9 +30,18 @@
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
                     <form action="db.php" method="post">
-                        <input type="text" name="username" placeholder="Username" required autofocus="" >
-                        <input type="password" name="password" placeholder="Password">
-                        <button class="lbtn" type="submit">Log In</button>
+                        <input type="text" name="username" placeholder="Username"> <br />
+                            <?php if(isset($username_error)) { ?>
+                                <p><?php echo $username_error?></p>
+                            <?php } ?>
+                        <input type="password" name="password" placeholder="Password"> <br />
+                            <?php if(isset($password_error)) { ?>
+                                <p><?php echo $password_error?></p>
+                            <?php } ?>
+                        <button class="lbtn" type="submit">Log In</button> <br />
+                            <?php if(isset($found_error)) { ?>
+                                    <p><?php echo $found_error?></p>
+                            <?php } ?>
                     </form>
                     <p class="account">Don't have an account? <a href="signup.html">Register</a></p>
                 </div>
