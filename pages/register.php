@@ -182,7 +182,7 @@ if(isset($_POST['redirect'])){
           echo $sql3 . "<br>" . $e->getMessage();
         }
         session_destroy();
-        //header("Location: login.php");
+        header("Location: login.php");
     }
     include("add_interests.php");
   }
