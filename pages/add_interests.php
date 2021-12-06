@@ -1,9 +1,3 @@
-
-
-<?php
-// define variables and set to empty values
-
-?>
 <!DOCTYPE html>
 <head lang="en">
     <title>Sign-Up</title>
@@ -18,10 +12,10 @@
 
 <body class="signupBody">
     <!-- The navigation bar -->
-	<div class="nav-bar">
+    <div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
-		<a class = "active"href="signup.php">Sign Up</a>
-		<a  href="login.php">Login</a>
+		<a  class = "active" href="signup.php">Sign Up</a>
+		<a href="login.php">Login</a>
 		<a href="profile.php">Profile</a>
 		<a href="explore.php">Explore</a>
         <a href="../homepage.php">Homepage</a>
@@ -30,40 +24,30 @@
     <form action="register.php" id="signupForm"  method="post">
       <ul id="progressbar">
         <li class="active">Personal Details</li>
-        <li>Account Setup</li>
-        <li>Interests</li>
+        <li class="active">Account Setup</li>
+        <li class="active">Interests</li>
       </ul>
-      <!--each fieldset is form of information for user to fill out-->
-      
 
-      <fieldset class = "f1">
-        <h2 class="formTitle">PERSONAL INFORMATION</h2>
-        
-        <input type="text" name="firstName" id="firstName1" placeholder = "First Name" >
-        <?php if(isset($nameErr)) {?>
-            <p><?php echo $nameErr ?><p>
-          <?php } ?>
-        <input type="text" name="lastName" id="lastName" placeholder = "Last Name">
-        <?php if(isset($lnameErr)) {?>
-            <p><?php echo $lnameErr ?><p>
-          <?php } ?>
-        <input type="text" name="age" id="age" placeholder = "Age" >
-        <?php if(isset($ageErr)) {?>
-            <p><?php echo $ageErr ?><p>
-          <?php } ?>
-        
-   
-        <input type="submit" name="next1" class="next action-button" value="next">
-        </fieldset>
-
-      </form>
-
-
-      
-
-      
-      
-    
+<fieldset>
+              <!-- Repeater Heading -->
+              <h2 class="formTitle">INTERESTS</h2>
+              <?php if(isset($interestErr)){ ?>
+                <p><?php echo $interestErr ?> <p>
+              <?php } ?>
+              <input type="text" name="interest" id="interest" placeholder = "Interest"> <br />
+              
+              <input type="text"  name="interest2" id="interest2" placeholder = "Interest">
+              <input type="text" name="interest3" id="interest3" placeholder = "Interest">
+              <input type="text" name="interest4" id="interest4" placeholder = "Interest">
+              <input type="text" name="interest5" id="interest5" placeholder = "Interest">
+              <input type="button" id="addinterest"  class="add action-button" value="add">
+            <input type="button" name="previous" class="previous action-button-previous" value="previous">
+            <!--currently redirects to homepage.html-->
+            <button type="submit" id="redirect" name="redirect" class="submit action-button">submit</button> 
+            
+          
+      </fieldset>
+    </form>
 
 <script
     src="https://code.jquery.com/jquery-3.1.1.slim.min.js"

@@ -1,8 +1,4 @@
-
-
-<?php
-// define variables and set to empty values
-
+<?php 
 ?>
 <!DOCTYPE html>
 <head lang="en">
@@ -18,9 +14,9 @@
 
 <body class="signupBody">
     <!-- The navigation bar -->
-	<div class="nav-bar">
+    <div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
-		<a class = "active"href="signup.php">Sign Up</a>
+		<a class = "active" href="signup.php">Sign Up</a>
 		<a  href="login.php">Login</a>
 		<a href="profile.php">Profile</a>
 		<a href="explore.php">Explore</a>
@@ -29,41 +25,30 @@
     
     <form action="register.php" id="signupForm"  method="post">
       <ul id="progressbar">
-        <li class="active">Personal Details</li>
-        <li>Account Setup</li>
+        <li class="active" >Personal Details</li>
+        <li class="active">Account Setup</li>
         <li>Interests</li>
       </ul>
-      <!--each fieldset is form of information for user to fill out-->
-      
 
-      <fieldset class = "f1">
-        <h2 class="formTitle">PERSONAL INFORMATION</h2>
-        
-        <input type="text" name="firstName" id="firstName1" placeholder = "First Name" >
-        <?php if(isset($nameErr)) {?>
-            <p><?php echo $nameErr ?><p>
+<fieldset>
+          <h2 class="formTitle">ACCOUNT SETUP</h2>
+          <input type="text" name="email" id="email1" placeholder = "Email" >
+          <?php if(isset($emailErr)) {?>
+            <p><?php echo $emailErr ?><p>
           <?php } ?>
-        <input type="text" name="lastName" id="lastName" placeholder = "Last Name">
-        <?php if(isset($lnameErr)) {?>
-            <p><?php echo $lnameErr ?><p>
+          <input type="text" name="usernamei" id="usernamei" placeholder = "Username" >
+          <?php if(isset($unameErr)) {?>
+            <p><?php echo $unameErr ?><p>
           <?php } ?>
-        <input type="text" name="age" id="age" placeholder = "Age" >
-        <?php if(isset($ageErr)) {?>
-            <p><?php echo $ageErr ?><p>
+          <input type="password" name="password" id="password" placeholder = "Password" >
+          <?php if(isset($passErr)) {?>
+            <p><?php echo $passErr ?><p>
           <?php } ?>
-        
-   
-        <input type="submit" name="next1" class="next action-button" value="next">
-        </fieldset>
+          <input type="button" name="previous" class="previous1 action-button-previous" value="previous">
+          <input type="submit" name="next2" class="next2 action-button" value="next">
+</fieldset>
 
-      </form>
-
-
-      
-
-      
-      
-    
+</form>
 
 <script
     src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
