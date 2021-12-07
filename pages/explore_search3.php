@@ -5,7 +5,7 @@
     $pass= '';
     $dbh = new PDO('mysql:host=localhost;dbname=destined_duo1', $user, $pass);
 
-    $query = "SELECT fname, lname, description, picture FROM user_interests UI, profile_information PI, users U WHERE UI.username = PI.username AND UI.username = U.username AND UI.interest =  '$search' ;";
+    $query = "SELECT fname, lname, description, picture, u.username as username FROM user_interests UI, profile_information PI, users U WHERE UI.username = PI.username AND UI.username = U.username AND UI.interest =  '$search' ;";
     //echo $query;
     /*try{
         $result = $dbh->query($query)->fetchall();

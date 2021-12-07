@@ -30,6 +30,7 @@
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
 		<a href="signup.php">Sign Up</a>
+        <a href="logout.php">Logout</a>
 		<a class = "active" href="login.php">Login</a>
 		<a href="profile.php">Profile</a>
 		<a href="explore.php">Explore</a>
@@ -42,11 +43,11 @@
                 <div class="cnt2">
                     <h2>Welcome Back!</h2>
                     <form action="db.php" method="post">
-                        <input type="text" name="username" placeholder="Username"> <br />
+                        <input type="text" name="username" placeholder="Username" style = "color:black;"> <br />
                             <?php if(isset($username_error)) { ?>
                                 <p><?php echo $username_error?></p>
                             <?php } ?>
-                        <input type="password" name="password" placeholder="Password"> <br />
+                        <input type="password" name="password" placeholder="Password" style = "color:black;"> <br />
                             <?php if(isset($password_error)) { ?>
                                 <p><?php echo $password_error?></p>
                             <?php } ?>
