@@ -18,7 +18,6 @@
 		<!-- The navigation bar -->
 	<div class="nav-bar">
 		<img id="logo" src="../logo.png" alt= "LOGO">
-		<a href="signup.php">Sign Up</a>
         <a href="logout.php">Logout</a>
 		<a href="login.php">Login</a>
 		<a href="profile.php">Profile</a>
