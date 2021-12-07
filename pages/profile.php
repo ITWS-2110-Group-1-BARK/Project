@@ -15,7 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../style.css">
+
 </head>
 <body>
     <!-- The navigation bar -->
@@ -30,40 +32,31 @@
 	</div>
     <br/><br/><br/>
 
+    <div id="dialog" title="Add Interests">
+        <form onsubmit = "add_interests(this);" id = "add_interests">
+            <label for="interest"> Interest Name: </label> </br>
+            <input type = "text" id = "interest_name" name = "interest" placeholder = "type new interest name"> <br>
+            <input type = "submit" value= "Submit">
+        </form>
+        </br>
+        <div id = "error_msg"></div>
+    </div>
+
     <div class = "profile_container">
      
         <!-- <img id = "profile_picture" src="../profile_images/profile_pic.jpg" alt="Profile Picture">  -->
         <!-- Has the possibility to become a profile changer in the future -->
         <div class = "profile_header">
-            <h3 id = "username"  class="hover-underline-animation"><?php echo $_SESSION['fname'] . " " . $_SESSION['lname']; ?></h3>
-            <h4 id = "mini_username"> Student at Rensselaer Polytechnic Institute (RPI)</h4>
+
         </div>
 
         <div class = "social_media_header">
-            <div class = "social_media_header_2">
-                <a class = "hover-underline-animation_social_media" href = "#">
-                    <img src = "../profile_images/message_icon.png" alt = "Message" >
-                </a>
-            </div>
-
-            <div class = "social_media_header_2">
-                <a class = "hover-underline-animation_social_media" href = "https://www.linkedin.com/in/brianna-lopez-ba5747168/">
-                    <img src = "../profile_images/linkedin_icon.png" alt = "LinkedIn">
-                </a>
-            </div>
-
-            <div class = "social_media_header_2">
-                <a class = "hover-underline-animation_social_media" href = "https://twitter.com/Brianna35561140">
-                    <img src = "../profile_images/twitter_icon.png" alt = "Twitter">
-                </a>    
-            </div>
-
-            <div class = "social_media_header_2">
-                <a class = "hover-underline-animation_social_media" href = "https://www.instagram.com/brilo0916/">
-                    <img src = "../profile_images/instagram_icon.png" alt = "Instagram">
-                </a>
-            </div>
+            
         </div>
+        
+
+        <button type="button" class = "button_pfp" onclick = "window.location.href= 'edit_profile.php'">Edit Profile Page</button>
+        <br/><br/><br/><br/>
 
         <div class = "description_container">
             <h3 class = "desc_header hover-underline-animation_3">About Me</h3>
@@ -79,17 +72,13 @@
             <table id = "contact_info"> 
                 <tr class = "contact_row"> 
                     <th class = "contact_row_title">Email:</th>
-                    <td><a class = "contact_text" href = "mailto:lopezb@rpi.edu"><?php 
+                    <td><a class = "contact_text"><?php 
                     if (empty($_SESSION['email'])) {
                         echo "No email saved";
                     } else {
                         echo $_SESSION['email'];
                      }
                       ?></a></td>
-                </tr>
-                <tr class = "contact_row">
-                    <th class = "contact_row_title">Phone-number:</th>
-                    <td><span class = "contact_text">123-456-7890</span></td>
                 </tr>
             </table>
         </div>
@@ -108,11 +97,14 @@
             <span class = "interest_block">Pets</span>
             <span class = "interest_block">Dogs</span>
             <span class = "interest_block">Reading</span> -->
+            <span class = "add"> <span class = "interest_block"> + </span> </span>
         </div>
      
     </div>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <script src= "profile.js" defer></script>
 </body>
 </html>
