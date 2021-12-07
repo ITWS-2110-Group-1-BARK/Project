@@ -164,7 +164,7 @@
             if ($sm_array) {
                 foreach($sm_array as $sm) {
                     if ($sm[1] != "") {
-                        print_r("<div class = 'social_media_header_2'> <a class = 'hover-underline-animation_social_media' href = 'https://" . $sm[1] . "'> <img src = '../profile_images/" . $sm[0] . "_icon.png' alt = '" . $sm[0] . "'> </a> </div>");
+                        print_r("<div class = 'social_media_header_2'> <a class = 'hover-underline-animation_social_media' href = 'https://" . $sm[1] . "'> <img src = '../profile_images/" . $sm[0] . "_icon.png' alt = '" . $sm[0] . "' title = '" . $sm[0] . "'> </a> </div>");
                     }
                 }
             }
