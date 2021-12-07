@@ -26,4 +26,4 @@ try{
 } catch (Exception $error){
     echo "There was an error in PFP.php. Error recieved: ". $error->getMessage();
 }
-?>
+

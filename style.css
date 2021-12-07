@@ -1064,6 +1064,20 @@ p.account a:hover{
   clear: both;
 }
 
+.no_float {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+  float: none;
+  clear: both;
+}
+
 
 .ui-widget {
   font-family: Verdana,Arial,sans-serif;
@@ -1123,10 +1137,16 @@ p.account a:hover{
   display:inline-block;
   vertical-align: top;
   padding-top: 2%;
+  padding-left:2%;
 }
 
 .center {
   display: inline-block;
+}
+
+.msg {
+  color:green;
+  font-size:100%;
 }
 
 /* End of Profile page styling */

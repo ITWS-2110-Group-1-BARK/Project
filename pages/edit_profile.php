@@ -39,7 +39,6 @@
                     </tr>
 
                     
-                    
                     <tr>
                         <td style = "font-weight: bold;" >Change Your First Name: </td>
                         <td><input onchange = "change_pfp('fname', this);" class = "form-control" type="text" name = "fname" required value = "<?php echo $_SESSION['fname']; ?>"></td>
@@ -63,9 +62,12 @@
 
                 </table>
             </form>  
+            <br/>
+            <p class = "msg" id = "profile_msg"></p>
 
             <br/><br/>
 
+            <h2>Edit Social Media Links: </h2>
             <form id = "social_media_form" method = "POST">
                 <select id = "social_medias" onchange = "changeFunc();">
                     <option value = ""> Select a social media </option>
@@ -81,11 +83,22 @@
                 <div id = "sc_input">
                     <!-- <input id = "social_med_link" required_value = "">  -->
                 </div>
+                <br/>
+            <p class = "msg" id = "sm_msg"></p>
             </div>
+
+            <br/><br/>
+
+            <h2> Change Profile Picture: </h2>
+            <button type="button" class = "no_float" onclick = "change_pfpicture('default.png');">Default Profile</button>
+            <button type="button" class = "no_float" onclick = "change_pfpicture('female.png');">Female Profile</button>
+            <button type="button" class = "no_float" onclick = "change_pfpicture('dog.png');">Dog Profile</button>
+            <button type="button" class = "no_float" onclick = "change_pfpicture('cat.jpeg');">Cat Profile</button>
+            <p class = "msg" id = "pfp_msg"></p>
             </div>
 
 
-            <br/>
+            <br/><br/><br/>
 
             <button type="button" class = "button_pfp" onclick = "window.location.href= 'profile.php'">Return to Your Profile</button>
             <br/><br/><br/>

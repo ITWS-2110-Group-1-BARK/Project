@@ -174,6 +174,43 @@
         }
     }
 
+    function change_pfp($picture_link) {
+        try{
+            session_start();
+            $dbhost= "localhost";
+            $dbusername= "root";
+            $dbpassword = "";
+            $dbname = "destined_duo1";
+
+            $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
+
+            $qry_2 = "UPDATE profile_media SET link = :link WHERE social_media = :social_media AND username = :username";
+
+            $qry = "UPDATE profile_information SET picture = :picture WHERE username = :username";
+
+            $pstmt = $conn->prepare($qry);
+
+            $pstmt->execute(array(":picture" => $picture_link, ":username" => $_SESSION['username']));
+
+            $sm_array = $pstmt->fetchall();
+            
+            // if ($picture_link = "profile_images/default.png") {
+                echo "Successfully updated Profile Picture to ";
+            // } else if ($picture_link = "profile_images/female.png") {
+            //     echo "Successfully updated Profile Picture to Female";
+            // } else if ($picture_link = "profile_images/dog.png") {
+            //     echo "Successfully updated Profile Picture to dog";
+            // } else if ($picture_link = "profile_images/cat.jpeg") {
+            //     echo "Successfully updated Profile Picture to cat";
+            // }
+            
+            
+
+        } catch (Exception $error){
+            echo "There was an error in desc.php. Error recieved: ". $error->getMessage();
+        }
+    }
+
     if (isset($_POST['desc'])) {
         get_desc();
     } else if (isset($_POST['name'])) {
@@ -184,6 +221,8 @@
         change_sm($_POST['change_sm'], $_POST['new_value_sm']);
     } else if (isset($_POST["sm"])) {
         get_sm();
+    } else if (isset($_POST['pfp'])) {
+        change_pfp($_POST['pfp']);
     }
 
 

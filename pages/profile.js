@@ -71,7 +71,7 @@ function change_sm(sm_title, obj) {
         success: function(data) {
             // alert("This was a success!");
             console.log(data);
-            // $("#sc_input").html(data);
+            $("#sm_msg").html("Changes saved for " + sm_title + " Link!");
 
         }, error: function(msg) {
             alert("There was a problem: " + msg.status + " " + msg.statusText);
@@ -207,7 +207,28 @@ function Load_PFP() {
 }
 
 
+function change_pfpicture(link) {
+    console.log(link);
+    var new_link = "profile_images/" + link;
+    console.log(new_link);
 
+    $.ajax({
+        type: "POST",
+        url: "desc.php",
+        data: {"pfp" : new_link},
+
+        success: function(data) {
+            console.log(data);
+            $("#pfp_msg").html(data + link + ". Refresh your page to see your change!");
+            // Load_PFP();
+            
+
+        }, error: function(msg) {
+            alert("There was a problem: " + msg.status + " " + msg.statusText);
+        }
+    });
+    
+}
 
 function change_pfp(type_, obj) {
 
@@ -220,7 +241,8 @@ function change_pfp(type_, obj) {
             data: {"fname" : obj.value},
     
             success: function(data) {
-                console.log(data);
+                // console.log(data);
+                $("#profile_msg").html("Changes saved for First Name!")
                 
     
             }, error: function(msg) {
@@ -236,7 +258,8 @@ function change_pfp(type_, obj) {
             data: {"lname" : obj.value},
     
             success: function(data) {
-                console.log(data);
+                // console.log(data);
+                $("#profile_msg").html("Changes saved for Last Name!")
                 
     
             }, error: function(msg) {
@@ -250,7 +273,8 @@ function change_pfp(type_, obj) {
             data: {"email" : obj.value},
     
             success: function(data) {
-                console.log(data);
+                // console.log(data);
+                $("#profile_msg").html("Changes saved for Email!")
                 
     
             }, error: function(msg) {
@@ -264,7 +288,8 @@ function change_pfp(type_, obj) {
             data: {"desc" : obj.value},
     
             success: function(data) {
-                console.log(data);
+                // console.log(data);
+                $("#profile_msg").html("Changes saved for your Description!")
                 
     
             }, error: function(msg) {
