@@ -8,7 +8,7 @@
     session_destroy();
     $_SESSION['logon'] = false;
     // create connection
-    $dbconn = new PDO("mysql:host=localhost;dbname=destined_duo1",$user,$pass);
+    $dbconn = new PDO("mysql:host=localhost;dbname=destined_duo4",$user,$pass);
     // check connection
     if (!$dbconn) {
        echo "Connection failed!";
@@ -29,6 +29,10 @@
         $query = "SELECT * FROM users WHERE username='$user' AND password='$hash'";
         $result = $dbconn->query($query);
         $entry = $result->fetch();
+
+        $query2 = "SELECT * FROM profile_information WHERE username='$user'";
+        $result2 = $dbconn->query($query2);
+        $entry2 = $result2->fetch();
         
         if (!empty($entry)){
             // CHECK THAT RESULT IS RETURNED
@@ -40,6 +44,7 @@
             $_SESSION['fname'] = $entry['fname'];
             $_SESSION['lname'] = $entry['lname'];
             $_SESSION['email'] = $entry['email'];
+            $_SESSION['desc'] = $entry2['description'];
             $_SESSION['is_admin'] = $entry['is_admin'];
             // add pages based off admin
             header("Location: admin.php");
