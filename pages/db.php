@@ -1,6 +1,6 @@
 <?php   
     $user = "root";
-    $pass = "Aneeshkadali_888";
+    $pass = "";
 
     // destroy any active sessions
     session_start();
