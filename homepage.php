@@ -28,10 +28,9 @@
 	    <p> Destined Duo is a web application where anyone can find someone in their area like 
             themselves looking to try the same new activity. New users can create a new account 
             and create a profile for themselves as well as creating specifications of what they are looking for 
-            in an activity buddy. They can create new activities on the community explore page to 
-            hopefully find someone looking to do the same thing they want to sign up for. As a user you can also look 
-            through activities on your explore page to respond or add any to your dashboard and message other people on 
-            Destined Duo who you would like to start an activity with. Our web application’s easy-to-navigate design 
+            in an activity buddy. As a user you can also look 
+            through activities on your explore page to find other people with similar interests on your dashboard. You can connect with them 
+            through their social media links as well! Our web application’s easy-to-navigate design 
             will allow users to easily browse and hopefully find the right buddy to start a new adventure together!
         </p>
         <div id="slideshow">
@@ -69,12 +68,10 @@
             If you are young person who is looking to make friends with people who share the similar interests Destined Duo is the way to find people like you.
             All it takes is a quick search to find someone who has the 
             same interests as you in a certain activity, and now there is newfound friendship. This can be from creating study sessions for 
-            different classes, to playing a sport or going to the gym with someone to connect with and spot you. It is limited to one person 
-            per activity and through trying out different activities, one can meet a span of different people they would not have met had it 
-            not been through Destined Duo. Things such as completing school work and hanging out at club/sports events is much more enjoyable 
-            when you can have someone to enjoy it with. Parents also can be relieved, knowing that their children are not alone and are enjoying 
-            their college experience as a result of using Destined Duo to connect with others. The people you meet online and connect with could 
-            be potential future friends for the next 4 years that they are in college, and beyond! 
+            different classes, to playing a sport or going to the gym with someone to connect with and spot you. You could meet a span of different people that you might not have otherwise 
+            through Destined Duo. Things such as completing school work and hanging out at club/sports events is much more enjoyable 
+            when you can have someone to enjoy it with. The people you meet online and connect with could 
+            be potential future friends the rest of your lives! 
         </p>
 
     </div>

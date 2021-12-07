@@ -1,6 +1,6 @@
 <?php   
     $user = "root";
-    $pass = "";
+    $pass = "Aneeshkadali_888";
 
     // destroy any active sessions
     session_start();
@@ -18,17 +18,14 @@
     $user = stripslashes(htmlspecialchars(trim($_POST["username"])));
     $code = stripslashes(htmlspecialchars(trim($_POST["password"])));
 
-    $hash= hash("sha256", $code);
-    $code = "";
-
-    if (empty($user)) {
-        header("Location: login.php?error=User Name is required");
-        exit();
-    } else if(empty($hash)) {
-        header("Location: login.php?error=Password is required");
-        exit();
-    } else {
+    if(empty($code)) {
+        $password_error = "Please insert your password";
+    } if(empty($user)) {
+        $username_error = "Please insert your username";
+    } else if (!empty($code) && !empty($user)) {
         // query to check for user/password
+        $hash= hash("sha256", $code);
+        $code = "";
         $query = "SELECT * FROM users WHERE username='$user' AND password='$hash'";
         $result = $dbconn->query($query);
         $entry = $result->fetch();
@@ -52,7 +49,9 @@
             // add pages based off admin
             header("Location: admin.php");
         } else {
-            header("Location: login.php?error=User not found");
+            $found_error = "User not found";
+            include("login.php");
         }
     }
+    include("login.php")
 ?>
