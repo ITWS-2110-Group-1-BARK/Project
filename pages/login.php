@@ -1,3 +1,17 @@
+<!-- <?php
+// $dbhost= "localhost";
+// $dbusername= "root";
+// $dbpassword = "";
+// $dbname = "destined_duo1";
+// $dbconn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
+
+// $query = "SELECT * FROM users";
+// $result = $dbconn->query($query);
+// $entry = $result->fetchall();
+// var_dump($entry);
+
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

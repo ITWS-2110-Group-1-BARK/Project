@@ -4,7 +4,7 @@ try{
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-    $dbpassword = "Aneeshkadali_888";
+    $dbpassword = "";
     $dbname = "destined_duo1";
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
@@ -17,7 +17,7 @@ try{
 
     $img = $pstmt->fetchall();
     if ($img) {
-        print_r("<img id = 'profile_picture' src='../profile_images/" . $img[0][0] . "' alt='Profile Picture'>");
+        print_r("<img id = 'profile_picture' src='../" . $img[0][0] . "' alt='Profile Picture'>");
     } else {
         echo "<img id = 'profile_picture' src='../profile_images/default.png' alt='Profile Picture'>";
     }
@@ -26,4 +26,4 @@ try{
 } catch (Exception $error){
     echo "There was an error in PFP.php. Error recieved: ". $error->getMessage();
 }
-?>
+
