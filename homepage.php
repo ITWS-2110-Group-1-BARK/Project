@@ -17,7 +17,7 @@
     <div class="nav-bar">
         <img id="logo" src="logo.png" alt= "LOGO">
         <a href="pages/signup.php">Sign Up</a>
-        <a href="logout.php">Logout</a>
+        <a href="pages/logout.php">Logout</a>
         <a href="pages/login.php">Login</a>
         <a href="pages/profile.php">Profile</a>
         <a href="pages/explore.php">Explore</a>
