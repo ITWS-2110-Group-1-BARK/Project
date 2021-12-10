@@ -1023,8 +1023,8 @@ p.account a:hover{
   cursor: pointer;
   border-radius: 50%;
   width: 1px;
-  padding-left: 7%;
-  padding-right:7%;
+  padding-left: 75px;
+  padding-right:75px;
   flex-shrink: 1;
   color: rgb(255, 255, 255);
   font-weight: bolder;
@@ -1039,7 +1039,6 @@ p.account a:hover{
   cursor: pointer;
   color: red;
   transition: all 0.5s ease;
-  
   font-size: 35px;
   font-weight: bold;
 }
@@ -1149,4 +1148,16 @@ p.account a:hover{
   font-size:100%;
 }
 
+#desc_edit {
+  font-family: 'Raleway';
+  width: 260%;
+  height: 100px;
+  padding: 5px 5px; 
+  line-height: 20px;
+  display:inline-block;
+  white-space: initial;
+  border-radius:5px;
+  resize: none;
+  font-size: 88%;
+}
 /* End of Profile page styling */
