@@ -57,7 +57,9 @@
 
                     <tr> 
                         <td style = "font-weight: bold;" >Change Your Description: </td>
-                        <td><input onchange = "change_pfp('desc', this);" class = "form-control" type="text" name = "desc" required value = "<?php echo $_SESSION['desc']; ?>"> </td>
+                        <td>
+                            <textarea onchange = "change_pfp('desc', this);" class = "form-control" id = "desc_edit" type="text" name = "desc" required value = "<?php echo $_SESSION['desc']; ?>">  </textarea>
+                        </td>
                     </tr>
 
                 </table>
@@ -65,7 +67,7 @@
             <br/>
             <p class = "msg" id = "profile_msg"></p>
 
-            <br/><br/>
+            <br/>
 
             <h2>Edit Social Media Links: </h2>
             <form id = "social_media_form" method = "POST">
@@ -91,7 +93,7 @@
 
             <h2> Change Profile Picture: </h2>
             <button type="button" class = "no_float" onclick = "change_pfpicture('default.png');">Default Profile</button>
-            <button type="button" class = "no_float" onclick = "change_pfpicture('female.png');">Female Profile</button>
+            <button type="button" class = "no_float" onclick = "change_pfpicture('female.png');">Default 2 Profile</button>
             <button type="button" class = "no_float" onclick = "change_pfpicture('dog.png');">Dog Profile</button>
             <button type="button" class = "no_float" onclick = "change_pfpicture('cat.jpeg');">Cat Profile</button>
             <p class = "msg" id = "pfp_msg"></p>
