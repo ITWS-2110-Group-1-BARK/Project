@@ -8,8 +8,6 @@ function load() {
         $dbpassword = "Aneeshkadali_888";
         $dbname = "destined_duo4";
 
-      
-
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
         $qry = "SELECT interest FROM user_interests WHERE username = :username";
@@ -77,7 +75,6 @@ function add_interest($interest) {
         $dbusername= "root";
         $dbpassword = "Aneeshkadali_888";
         $dbname = "destined_duo4";
-
 
         $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 

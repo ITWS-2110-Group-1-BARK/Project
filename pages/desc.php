@@ -102,7 +102,6 @@
             $dbpassword = "Aneeshkadali_888";
             $dbname = "destined_duo4";
 
-
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
             $qry = "SELECT link FROM profile_media WHERE username = :username AND social_media = :social_media";
@@ -149,7 +148,7 @@
             $dbusername= "root";
             $dbpassword = "Aneeshkadali_888";
             $dbname = "destined_duo4";
-          
+
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
             $qry = "SELECT social_media, link FROM profile_media WHERE username = :username";
@@ -182,7 +181,6 @@
             $dbusername= "root";
             $dbpassword = "Aneeshkadali_888";
             $dbname = "destined_duo4";
-
 
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
