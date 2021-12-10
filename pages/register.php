@@ -4,11 +4,13 @@ session_start();
 
 $dbhost= "localhost";
 $dbusername= "root";
-$dbpassword = "";
-$dbname = "destined_duo1";
+
+$dbpassword = "Aneeshkadali_888";
+$dbname = "destined_duo4";
+
 
 //$dbconn = mysqli_connect($dbhost, $dbusername, $dbpassword, $dbname);
-$dbconn = new PDO("mysql:host=localhost;dbname=destined_duo1",$dbusername,$dbpassword);
+$dbconn = new PDO("mysql:host=localhost;dbname=destined_duo4",$dbusername,$dbpassword);
 if (!$dbconn) {
     echo "Connection failed!";
 }

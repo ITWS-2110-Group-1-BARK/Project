@@ -5,8 +5,8 @@
             session_start();
             $dbhost= "localhost";
             $dbusername= "root";
-            $dbpassword = "";
-            $dbname = "destined_duo1";
+            $dbpassword = "Aneeshkadali_888";
+            $dbname = "destined_duo4";
 
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
@@ -33,8 +33,8 @@
             session_start();
             $dbhost= "localhost";
             $dbusername= "root";
-            $dbpassword = "";
-            $dbname = "destined_duo1";
+            $dbpassword = "Aneeshkadali_888";
+            $dbname = "destined_duo4";
 
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
@@ -67,8 +67,8 @@
             session_start();
             $dbhost= "localhost";
             $dbusername= "root";
-            $dbpassword = "";
-            $dbname = "destined_duo1";
+            $dbpassword = "Aneeshkadali_888";
+            $dbname = "destined_duo4";
 
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
@@ -99,8 +99,9 @@
             session_start();
             $dbhost= "localhost";
             $dbusername= "root";
-            $dbpassword = "";
-            $dbname = "destined_duo1";
+            $dbpassword = "Aneeshkadali_888";
+            $dbname = "destined_duo4";
+
 
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
@@ -146,9 +147,9 @@
             session_start();
             $dbhost= "localhost";
             $dbusername= "root";
-            $dbpassword = "";
-            $dbname = "destined_duo1";
-
+            $dbpassword = "Aneeshkadali_888";
+            $dbname = "destined_duo4";
+          
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
             $qry = "SELECT social_media, link FROM profile_media WHERE username = :username";
@@ -164,7 +165,7 @@
             if ($sm_array) {
                 foreach($sm_array as $sm) {
                     if ($sm[1] != "") {
-                        print_r("<div class = 'social_media_header_2'> <a class = 'hover-underline-animation_social_media' href = 'https://" . $sm[1] . "'> <img src = '../profile_images/" . $sm[0] . "_icon.png' alt = '" . $sm[0] . "' title = '" . $sm[0] . "'> </a> </div>");
+                        print_r("<div class = 'social_media_header_2'> <a class = 'hover-underline-animation_social_media' href = 'https://" . $sm[1] . "'> <img src = '../profile_images/" . $sm[0] . "_icon.png' alt = '" . $sm[0] . "'> </a> </div>");
                     }
                 }
             }
@@ -179,8 +180,9 @@
             session_start();
             $dbhost= "localhost";
             $dbusername= "root";
-            $dbpassword = "";
-            $dbname = "destined_duo1";
+            $dbpassword = "Aneeshkadali_888";
+            $dbname = "destined_duo4";
+
 
             $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 

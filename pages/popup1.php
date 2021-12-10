@@ -23,8 +23,9 @@
     //$search = '';
     //$search = $_POST['search'];
     $user = 'root';
-    $pass= '';
-    $dbh = new PDO('mysql:host=localhost;dbname=destined_duo1', $user, $pass);
+    $pass= 'Aneeshkadali_888';
+    $dbh = new PDO('mysql:host=localhost;dbname=destined_duo4', $user, $pass);
+
     /*if (php_sapi_name() == 'cli') {
         $args = $_SERVER['argv'];
     } else {

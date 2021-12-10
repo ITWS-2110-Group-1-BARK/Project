@@ -4,8 +4,9 @@ function change_fname($change) {
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-    $dbpassword = "";
-    $dbname = "destined_duo1";
+    $dbpassword = "Aneeshkadali_888";
+    $dbname = "destined_duo4";
+
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
     try{
@@ -26,8 +27,9 @@ function change_lname($change) {
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-    $dbpassword = "";
-    $dbname = "destined_duo1";
+  
+    $dbpassword = "Aneeshkadali_888";
+    $dbname = "destined_duo4";
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
     try{
@@ -49,8 +51,9 @@ function change_email($change) {
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-    $dbpassword = "";
-    $dbname = "destined_duo1";
+    $dbpassword = "Aneeshkadali_888";
+    $dbname = "destined_duo4";
+
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
     try{
@@ -72,8 +75,8 @@ function change_desc($change) {
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-    $dbpassword = "";
-    $dbname = "destined_duo1";
+    $dbpassword = "Aneeshkadali_888";
+    $dbname = "destined_duo4";
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
     try{
