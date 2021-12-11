@@ -133,21 +133,13 @@ if(isset($_POST['redirect'])){
           echo $sql2 . "<br>" . $e->getMessage();
         }
     }
-
-     /*$fname = validate($_POST['firstName']);
-     $lname = validate($_POST['lastName']);
-     
-     $age = validate($_POST['age']);*/
-     
     
      $interest2 = validate($_POST['interest2']);
      $interest3 = validate($_POST['interest3']);
      $interest4 = validate($_POST['interest4']);
      $interest5 = validate($_POST['interest5']);
      $uname = $_SESSION['uname'];
-    // $hash = hash("sha256", $pass);
-    // $pass = "";
-     
+
       
      
        
