@@ -7,7 +7,6 @@ function change_fname($change) {
     $dbpassword = "Aneeshkadali_888";
     $dbname = "destined_duo4";
 
-
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
     try{
 
@@ -27,7 +26,6 @@ function change_lname($change) {
     session_start();
     $dbhost= "localhost";
     $dbusername= "root";
-  
     $dbpassword = "Aneeshkadali_888";
     $dbname = "destined_duo4";
 
@@ -53,7 +51,6 @@ function change_email($change) {
     $dbusername= "root";
     $dbpassword = "Aneeshkadali_888";
     $dbname = "destined_duo4";
-
 
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
     try{

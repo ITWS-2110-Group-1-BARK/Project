@@ -24,14 +24,12 @@
     //$search = $_POST['search'];
     $user = 'root';
     $pass= 'Aneeshkadali_888';
-    $dbh = new PDO('mysql:host=localhost;dbname=destined_duo4', $user, $pass);
-
-    /*if (php_sapi_name() == 'cli') {
-        $args = $_SERVER['argv'];
-    } else {
-        parse_str($_SERVER['QUERY_STRING'], $args);
+    try{
+        $dbh = new PDO('mysql:host=localhost;dbname=destined_duo4', $user, $pass);
     }
-    echo $args[0];*/
+    catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+    }
     $username = '';
     if (isset($_GET["username"]))
     {
@@ -40,6 +38,12 @@
 
     $query = "SELECT fname, lname, description, picture, age, email, interest FROM user_interests UI, profile_information PI, users U WHERE UI.username = PI.username AND UI.username = U.username AND U.username = '$username';";
     $results = $dbh->query($query)->fetchall(PDO::FETCH_ASSOC);
+    try{
+        $results = $dbh->query($query)->fetchall(PDO::FETCH_ASSOC);
+    }
+    catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+    }
 
     $fname = $results[0]['fname'];
     $lname = $results[0]['lname'];
@@ -92,7 +96,7 @@
                             $image = "../profile_images/linkedin_icon.png";
                         }
                         else{
-                            $image = "../profile_images/message_icon.png";
+                            $image = "../profile_images/Other_icon.png";
                         }
                 ?>
                 <div class = "social_media_header_2">

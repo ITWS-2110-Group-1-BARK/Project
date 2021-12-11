@@ -1,0 +1,9 @@
+Destined Duo Site Instructions 
+
+Step 1: Clone Repository
+Step 2: Create Database in phpMyAdmin under the name: Destined Duo 4
+Step 3a: Change password in XAMPP folder to Aneeshkadali_888 
+                 or 
+Step 3b: Change password in all of the appropriate PHP files that use a PDO connection
+Step 4: Import database (under the name destined_duo4.sql)
+Step 5: Run Application 

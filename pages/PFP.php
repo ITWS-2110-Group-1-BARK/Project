@@ -7,7 +7,6 @@ try{
     $dbpassword = "Aneeshkadali_888";
     $dbname = "destined_duo4";
 
-
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
     $qry = "SELECT picture FROM profile_information WHERE username = :username";
